@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { practice } from "@/data/practice";
+export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     "",

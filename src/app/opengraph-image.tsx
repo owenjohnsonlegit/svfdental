@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { practice } from "@/data/practice";
+export const dynamic = "force-static";
 export const alt =
   "South Valley Family Dental — Family dentistry in Providence, Utah";
 export const size = { width: 1200, height: 630 };

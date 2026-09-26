@@ -6,6 +6,7 @@
     "photos:prepare": "node scripts/prepare-photos.mjs",
     "dev": "next dev",
     "build": "next build --webpack",
+    "build:cloudflare": "NEXT_STATIC_EXPORT=1 next build --webpack",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
@@ -31,6 +32,7 @@
     "prettier": "^3.9.9",
     "sharp": "^0.35.4",
     "tailwindcss": "^4.1.0",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.0",
+    "wrangler": "^4.141.0"
   }
 }

@@ -1,0 +1,11 @@
+{
+  // Static-assets deployment for the existing Cloudflare Worker named svfdental.
+  // No OpenNext runtime or WORKER_SELF_REFERENCE binding is needed.
+  "name": "svfdental",
+  "compatibility_date": "2026-09-26",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
+const staticExport = process.env.NEXT_STATIC_EXPORT === "1";
 const config: NextConfig = {
+  ...(staticExport ? { output: "export" as const } : {}),
   poweredByHeader: false,
   images: {
     loader: "custom",
@@ -8,7 +10,8 @@ const config: NextConfig = {
     imageSizes: [],
   },
   // Confirm legacy paths against the existing site's sitemap before launch.
-  async redirects() {
+  // Static hosts read public/_redirects instead of Next's runtime redirects.
+  redirects: staticExport ? undefined : async () => {
     return [
       { source: "/office", destination: "/office-info", permanent: true },
       { source: "/our-location", destination: "/office-info", permanent: true },

@@ -1,6 +1,8 @@
 node_modules/
 .next/
 out/
+.wrangler/
+.open-next/
 playwright-report/
 test-results/
 *.tsbuildinfo

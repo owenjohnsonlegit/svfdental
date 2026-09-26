@@ -13,6 +13,8 @@ npm run dev
 
 Open http://localhost:3000. Production: `npm run build && npm start`.
 
+For Cloudflare, use **`npm run build:cloudflare`** to generate `out/index.html` and the complete static site. See [CLOUDFLARE.md](CLOUDFLARE.md) for the exact Pages and Workers dashboard settings and the fix for the Worker self-reference error.
+
 ## Check
 
 ```sh
@@ -44,4 +46,4 @@ Local SEO includes canonical URLs, page descriptions, Open Graph artwork, favico
 
 **Before deployment, complete [PRE-LAUNCH.md](PRE-LAUNCH.md).** The legacy site blocked automated access, so provider links, testimonials, current staff confirmation, and several business facts remain outstanding. Owner-supplied office photography is now integrated. No fabricated provider URLs, staff biographies, or reviews are used.
 
-Photos use a custom Next.js loader pointing to pre-generated static WebP files in `public/photos`. This avoids a runtime image optimizer and remains compatible with a future Cloudflare Pages static export. The overall deployment configuration has not changed. Original JPEGs stay in `images/` and are not served by the application.
+Photos use a custom Next.js loader pointing to pre-generated static WebP files in `public/photos`. This avoids a runtime image optimizer and works with the Cloudflare static export. Original JPEGs stay in `images/` and are not served by the application.

@@ -94,7 +94,7 @@ test("internal routes, metadata, redirects and 404", async ({ request }) => {
   );
   expect((await request.get("/opengraph-image")).status()).toBe(200);
   const redirect = await request.get("/our-location", { maxRedirects: 0 });
-  expect(redirect.status()).toBe(308);
+  expect(redirect.status()).toBe(301);
   expect(redirect.headers().location).toBe("/office-info");
 });
 test("phone, directions, schema and unknown hours are consistent", async ({

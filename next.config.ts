@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
-const staticExport = process.env.NEXT_STATIC_EXPORT === "1";
+// Export by default, including plain `next build` in hosted build systems.
+// The server build is an explicit opt-in for local Next.js production previews.
+const staticExport = process.env.NEXT_SERVER_BUILD !== "1";
 const config: NextConfig = {
   ...(staticExport ? { output: "export" as const } : {}),
   poweredByHeader: false,

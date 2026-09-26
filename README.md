@@ -11,9 +11,9 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. Production: `npm run build && npm start`.
+Open http://localhost:3000. Static production build: `npm run build`. Preview that output with `npm run preview`.
 
-For Cloudflare, use **`npm run build:cloudflare`** to generate `out/index.html` and the complete static site. See [CLOUDFLARE.md](CLOUDFLARE.md) for the exact Pages and Workers dashboard settings and the fix for the Worker self-reference error.
+For Cloudflare, use **`npm run build`** to generate `out/index.html` and the complete static site. See [CLOUDFLARE.md](CLOUDFLARE.md) for the exact Pages and Workers dashboard settings and the fix for the Worker self-reference error.
 
 ## Check
 

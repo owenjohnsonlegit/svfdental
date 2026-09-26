@@ -8,12 +8,12 @@ The supplied failure log is from Workers (`/workers/scripts/svfdental/versions`)
 
 After committing and pushing these changes, set the existing project's build configuration to:
 
-| Setting | Value |
-|---|---|
-| Root directory | Repository root |
-| Build command | `npm run build:cloudflare` |
-| Deploy command | `npx wrangler deploy` |
-| Node.js version | `22` |
+| Setting         | Value                      |
+| --------------- | -------------------------- |
+| Root directory  | Repository root            |
+| Build command   | `npm run build:cloudflare` |
+| Deploy command  | `npx wrangler deploy`      |
+| Node.js version | `22`                       |
 
 If a separate non-production branch deploy command is enabled, use `npx wrangler versions upload`. Remove any old command invoking OpenNext or a generated `.open-next` config. The root `wrangler.jsonc` is the deployment source of truth. Keep its `name` equal to the Worker name in the dashboard. Do not create an extra Worker just to satisfy the old self-reference.
 
@@ -21,13 +21,13 @@ If a separate non-production branch deploy command is enabled, use `npx wrangler
 
 Create a **Pages** project connected to the repository. Use:
 
-| Setting | Value |
-|---|---|
-| Framework preset | Next.js (Static HTML Export), or None with the settings below |
-| Build command | `npm run build:cloudflare` |
-| Build output directory | `out` |
-| Root directory | Repository root |
-| Node.js version | `22` |
+| Setting                | Value                                                         |
+| ---------------------- | ------------------------------------------------------------- |
+| Framework preset       | Next.js (Static HTML Export), or None with the settings below |
+| Build command          | `npm run build:cloudflare`                                    |
+| Build output directory | `out`                                                         |
+| Root directory         | Repository root                                               |
+| Node.js version        | `22`                                                          |
 
 Pages Git integration does not need a Wrangler deploy command. The root Wrangler file is for the optional Workers deployment; configure Pages output in its dashboard. No `pages_build_output_dir` is included, so the Wrangler file is not used as a Pages configuration.
 

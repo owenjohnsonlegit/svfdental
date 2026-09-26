@@ -11,15 +11,25 @@ const config: NextConfig = {
   },
   // Confirm legacy paths against the existing site's sitemap before launch.
   // Static hosts read public/_redirects instead of Next's runtime redirects.
-  redirects: staticExport ? undefined : async () => {
-    return [
-      { source: "/office", destination: "/office-info", permanent: true },
-      { source: "/our-location", destination: "/office-info", permanent: true },
-      { source: "/dental-staff", destination: "/about", permanent: true },
-      { source: "/about-us", destination: "/about", permanent: true },
-      { source: "/contact-us", destination: "/contact", permanent: true },
-      { source: "/dental-services", destination: "/services", permanent: true },
-    ];
-  },
+  redirects: staticExport
+    ? undefined
+    : async () => {
+        return [
+          { source: "/office", destination: "/office-info", permanent: true },
+          {
+            source: "/our-location",
+            destination: "/office-info",
+            permanent: true,
+          },
+          { source: "/dental-staff", destination: "/about", permanent: true },
+          { source: "/about-us", destination: "/about", permanent: true },
+          { source: "/contact-us", destination: "/contact", permanent: true },
+          {
+            source: "/dental-services",
+            destination: "/services",
+            permanent: true,
+          },
+        ];
+      },
 };
 export default config;

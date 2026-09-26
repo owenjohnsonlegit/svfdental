@@ -1185,6 +1185,7 @@ main:focus {
     margin-top: 22px;
   }
   .hero-visual {
+    order: -1;
     margin-left: 10px;
     margin-right: 0;
   }

@@ -1,5 +1,17 @@
 # QA results — September 27, 2026
 
+## Owner photography update
+
+- Visually classified all 26 source photographs; 19 distinct images are displayed across seven routes. Individual staff portraits are prepared but remain unpublished pending current-roster confirmation.
+- Replaced public placeholders with authentic photography; added a captioned office tour, equipment gallery, team photo, portrait, and local aerial context.
+- Generated 130 static WebP variants (five widths per photo), with original files preserved and metadata stripped from delivery copies.
+- Browser suite: 30/30 passed, now also checking every displayed photo decodes, has alt text/srcset, and loads a static WebP URL.
+- Captured five main routes at 1440, 768, 390, and 320px; reviewed homepage desktop/mobile and About, Office Info, Services, and Contact layouts.
+- New Lighthouse mobile result with real photography: **99 performance / 100 accessibility / 100 best practices / 100 SEO**. LCP 2.1s, TBT 20ms, CLS 0. Local lab results vary by run and do not replace production monitoring.
+- Build, TypeScript, and formatting checks pass. Full per-photo classification is in [PHOTO-INVENTORY.md](../PHOTO-INVENTORY.md).
+
+## Initial build baseline (before photography)
+
 - Production build and TypeScript: passed; all routes prerendered.
 - Formatting and Git whitespace checks: passed.
 - Playwright: 30/30 passed across desktop Chromium, tablet Chromium, and iPhone-sized WebKit.

@@ -10,6 +10,7 @@ export function PatientResource({ type }: { type: "forms" | "payment" }) {
       <PageHero
         eyebrow="Patient resources"
         title={forms ? "Patient forms" : "Make a payment"}
+        photo="reception"
       >
         {forms
           ? "Prepare for your visit with help from our office."

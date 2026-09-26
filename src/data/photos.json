@@ -1,0 +1,158 @@
+{
+  "waiting-room-seating": {
+    "src": "/photos/waiting-room-seating",
+    "width": 2048,
+    "height": 1366,
+    "alt": "Wood-framed chairs and a brown sofa beside the waiting-room windows"
+  },
+  "building-close": {
+    "src": "/photos/building-close",
+    "width": 2048,
+    "height": 1152,
+    "alt": "Front of the South Valley Family Dental building and covered entrance"
+  },
+  "building-west": {
+    "src": "/photos/building-west",
+    "width": 2048,
+    "height": 1152,
+    "alt": "Elevated view of the dental office, parking area, and surrounding neighborhood"
+  },
+  "building-front": {
+    "src": "/photos/building-front",
+    "width": 2048,
+    "height": 1152,
+    "alt": "Centered view of the dental office entrance from the parking area"
+  },
+  "intraoral-xray": {
+    "src": "/photos/intraoral-xray",
+    "width": 2048,
+    "height": 3071,
+    "alt": "Wall-mounted dental X-ray arm beside a treatment-room window"
+  },
+  "bethany": {
+    "src": "/photos/bethany",
+    "width": 2048,
+    "height": 2731,
+    "alt": "Bethany, in an owner-supplied staff portrait"
+  },
+  "dental-instruments": {
+    "src": "/photos/dental-instruments",
+    "width": 2048,
+    "height": 1366,
+    "alt": "Dental instruments arranged on a treatment tray"
+  },
+  "dental-instruments-vertical": {
+    "src": "/photos/dental-instruments-vertical",
+    "width": 2048,
+    "height": 3071,
+    "alt": "Vertical view of a dental instrument tray and delivery unit"
+  },
+  "massage-chair": {
+    "src": "/photos/massage-chair",
+    "width": 2048,
+    "height": 3068,
+    "alt": "Black massage chair in a room off the office hallway"
+  },
+  "treatment-room-door": {
+    "src": "/photos/treatment-room-door",
+    "width": 2048,
+    "height": 1366,
+    "alt": "Dental chair, wood cabinetry, and windows viewed from a treatment-room doorway"
+  },
+  "treatment-room": {
+    "src": "/photos/treatment-room",
+    "width": 2048,
+    "height": 1366,
+    "alt": "Dental treatment room with a reclining chair, overhead light, and wood cabinets"
+  },
+  "paige": {
+    "src": "/photos/paige",
+    "width": 2048,
+    "height": 2731,
+    "alt": "Paige, in an owner-supplied staff portrait"
+  },
+  "panoramic-room": {
+    "src": "/photos/panoramic-room",
+    "width": 2048,
+    "height": 3071,
+    "alt": "Panoramic dental imaging unit viewed through its room doorway"
+  },
+  "panoramic-xray": {
+    "src": "/photos/panoramic-xray",
+    "width": 2048,
+    "height": 3071,
+    "alt": "Panoramic dental imaging unit inside the office"
+  },
+  "reception-workspace": {
+    "src": "/photos/reception-workspace",
+    "width": 2048,
+    "height": 1365,
+    "alt": "Reception workspace with wood cabinetry, white counters, and the adjacent hallway"
+  },
+  "reception": {
+    "src": "/photos/reception",
+    "width": 2048,
+    "height": 1367,
+    "alt": "Front reception counter with wood cabinetry and pendant lights"
+  },
+  "richard": {
+    "src": "/photos/richard",
+    "width": 2048,
+    "height": 2731,
+    "alt": "Richard S. Johnson, DDS, wearing dark dental scrubs"
+  },
+  "valley-east": {
+    "src": "/photos/valley-east",
+    "width": 2048,
+    "height": 1152,
+    "alt": "Aerial view across Providence toward the snow-dusted Cache Valley mountains"
+  },
+  "valley-southeast": {
+    "src": "/photos/valley-southeast",
+    "width": 2048,
+    "height": 1152,
+    "alt": "Aerial neighborhood view with the South Valley Family Dental location labeled beneath the mountains"
+  },
+  "valley-west": {
+    "src": "/photos/valley-west",
+    "width": 2048,
+    "height": 1152,
+    "alt": "Westward aerial view across Cache Valley with the dental office location labeled"
+  },
+  "team": {
+    "src": "/photos/team",
+    "width": 2048,
+    "height": 1366,
+    "alt": "South Valley Family Dental group photographed outside the office entrance"
+  },
+  "teresa": {
+    "src": "/photos/teresa",
+    "width": 2048,
+    "height": 2731,
+    "alt": "Teresa, in an owner-supplied staff portrait"
+  },
+  "waiting-room-wide": {
+    "src": "/photos/waiting-room-wide",
+    "width": 2048,
+    "height": 1366,
+    "alt": "Waiting-room chairs beneath a wall map, with reception visible beyond"
+  },
+  "waiting-room-fireplace": {
+    "src": "/photos/waiting-room-fireplace",
+    "width": 2048,
+    "height": 1366,
+    "alt": "Brown sofa and blue chairs arranged around the waiting-room fireplace"
+  },
+  "waiting-room-windows": {
+    "src": "/photos/waiting-room-windows",
+    "width": 2048,
+    "height": 1365,
+    "alt": "Sunlit waiting area with a brown sofa, blue chairs, and plants beside a wall water feature"
+  },
+  "waiting-room": {
+    "src": "/photos/waiting-room",
+    "width": 2048,
+    "height": 1365,
+    "alt": "View from the waiting room toward the reception counter and wall map"
+  }
+}

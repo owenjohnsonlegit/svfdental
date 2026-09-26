@@ -9,8 +9,23 @@ for (const [name, width, height] of [
   ["small-mobile", 320, 740],
 ]) {
   const page = await browser.newPage({ viewport: { width, height } });
-  await page.goto("http://127.0.0.1:3000");
-  await page.screenshot({ path: `qa/home-${name}.png`, fullPage: true });
+  for (const route of [
+    "/",
+    "/office-info",
+    "/services",
+    "/about",
+    "/contact",
+  ]) {
+    await page.goto(`http://127.0.0.1:3000${route}`);
+    for (const image of await page.locator("main img").all()) {
+      await image.scrollIntoViewIfNeeded();
+      await image.evaluate((node) => node.decode());
+    }
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+    const slug = route === "/" ? "home" : route.slice(1);
+    await page.screenshot({ path: `qa/${slug}-${name}.png`, fullPage: true });
+    if (route === "/") await page.screenshot({ path: `qa/hero-${name}.png` });
+  }
   console.log(
     `${name}: overflow=${await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)}`,
   );

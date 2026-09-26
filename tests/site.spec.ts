@@ -18,6 +18,23 @@ for (const path of pages) {
     const response = await page.goto(path);
     expect(response?.status()).toBe(200);
     await expect(page.locator("h1")).toHaveCount(1);
+    // Scroll to trigger lazy loading, then verify actual decoding and responsive delivery.
+    for (const image of await page.locator("main img").all()) {
+      await image.scrollIntoViewIfNeeded();
+      await expect(image).toHaveAttribute("alt", /.+/);
+      await expect(image).toHaveAttribute("srcset", /400w/);
+      await expect
+        .poll(() =>
+          image.evaluate(
+            (node: HTMLImageElement) => node.complete && node.naturalWidth > 0,
+          ),
+        )
+        .toBe(true);
+      expect(
+        await image.evaluate((node: HTMLImageElement) => node.currentSrc),
+      ).toMatch(/\/photos\/.+\.webp$/);
+    }
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
       `https://southvalleyfamilydental.com${path === "/" ? "" : path}`,

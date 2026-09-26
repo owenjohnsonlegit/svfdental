@@ -30,7 +30,11 @@ Browser tests cover desktop Chromium, tablet Chromium, and mobile WebKit, includ
 - `src/data/services.ts`: categorized services and practice features.
 - `src/data/staff.ts`: roster, hidden until verified.
 - `src/data/testimonials.ts`: approved testimonials only.
-- `src/components/ui.tsx`: shared cards, hours, CTAs, and labeled image placeholders.
+- `src/components/ui.tsx`: shared cards, hours, and CTAs.
+- `src/components/photography.tsx`: responsive practice photos and captioned galleries.
+- `scripts/photo-catalog.mjs`: classifications and placements for all 26 supplied images.
+- `scripts/prepare-photos.mjs`: generates static WebP variants and `src/data/photos.json`; run `npm run photos:prepare` after updating originals.
+- [PHOTO-INVENTORY.md](PHOTO-INVENTORY.md): complete visual inventory and image-delivery notes.
 - `src/app/globals.css`: responsive design tokens and styles.
 - `next.config.ts`: provisional legacy redirects.
 
@@ -38,4 +42,6 @@ Routes: `/`, `/office-info`, `/services`, `/about`, `/contact`. `/patient-forms`
 
 Local SEO includes canonical URLs, page descriptions, Open Graph artwork, favicon, sitemap, robots, and Dentist JSON-LD. Unconfirmed hours are deliberately excluded from structured data.
 
-**Before deployment, complete [PRE-LAUNCH.md](PRE-LAUNCH.md).** The legacy site blocked automated access, so approved photography, provider links, testimonials, and several business facts remain outstanding. No fabricated provider URLs, staff biographies, or reviews are used.
+**Before deployment, complete [PRE-LAUNCH.md](PRE-LAUNCH.md).** The legacy site blocked automated access, so provider links, testimonials, current staff confirmation, and several business facts remain outstanding. Owner-supplied office photography is now integrated. No fabricated provider URLs, staff biographies, or reviews are used.
+
+Photos use a custom Next.js loader pointing to pre-generated static WebP files in `public/photos`. This avoids a runtime image optimizer and remains compatible with a future Cloudflare Pages static export. The overall deployment configuration has not changed. Original JPEGs stay in `images/` and are not served by the application.

@@ -11,11 +11,12 @@ The live legacy site returned a Cloudflare challenge during migration on Septemb
 - [ ] Confirm all 17 listed services and approve short edited descriptions against the original site. Treatment availability, orthodontics, implants, TMJ/TMD care, and emergency scheduling need particular attention.
 - [ ] Confirm digital X-rays, intraoral pictures, nitrous oxide, child-friendly staff training, sterilization/autoclaving, and infection-control statements.
 - [ ] Confirm Dr. Johnson’s degree, institution, summa cum laude distinction, Providence practice since 2005, continuing education, and Cache Valley/family background.
-- [ ] Verify current staff roster, roles, biographies, and portrait permissions. Paige, Kyla, Lura, Marnie, Lauren, Natalie, and Teresa are stored as unverified and are not published. Set each approved member’s `verified` flag only after review.
+- [ ] Verify current staff roster, roles, biographies, and portrait permissions. Individual staff entries remain unverified and unpublished. Owner-supplied portraits of Paige, Bethany, and Teresa are prepared; the group photograph is displayed without individual labels. Set each approved member’s `verified` flag only after review.
 - [ ] Supply original testimonials, attribution, source, and permission to publish. Deduplicate before marking `approved`; the section stays hidden until then. No ratings or reviews have been invented.
 - [ ] Confirm Spanish-language availability before adding “Se habla español” (currently omitted).
 - [ ] Confirm official social links (currently omitted).
-- [ ] Supply licensed authentic office/team hero photography, Dr. Johnson portrait, team photo, exterior, reception, treatment room, and optional staff portraits. The current visual panels are explicitly labeled placeholders. Use `next/image`, correct intrinsic dimensions, useful alt text, and responsive sizes; avoid upscaling low-resolution originals.
+- [x] Review and integrate owner-supplied photography. All 26 images are classified in PHOTO-INVENTORY.md; selected office, dentist, team, exterior, equipment, and valley photos now replace public placeholders. Responsive WebP copies preserve originals and use intrinsic dimensions, alt text, and lazy loading.
+- [ ] Confirm the three individual staff names/current employment before enabling their prepared portrait cards.
 - [ ] Confirm rights to any migrated assets and approve the provisional mountain wordmark or replace it with the official logo.
 - [ ] Review the current practice privacy policy and add the approved policy/link if appropriate. No policy was invented; no analytics, forms, tracking pixels, maps embed, or medical-data collection have been added.
 - [ ] Retrieve the old sitemap/URL inventory, confirm the provisional redirects in `next.config.ts`, and add redirects for other valuable old URLs. Verify canonical domain and DNS/deployment configuration.
@@ -23,8 +24,8 @@ The live legacy site returned a Cloudflare challenge during migration on Septemb
 
 ## Content and asset provenance
 
-`src/data/practice.ts`, `services.ts`, and `staff.ts` use the provided redesign brief. Service descriptions are conservative editorial summaries pending comparison to the inaccessible original descriptions. `testimonials.ts` is intentionally empty. No stock or AI-generated people/office imagery is used. Decorative placeholder panels and the provisional wordmark are code-native artwork, not representations of the real office.
+`src/data/practice.ts`, `services.ts`, and `staff.ts` use the provided redesign brief. Service descriptions are conservative editorial summaries pending comparison to the inaccessible original descriptions. `testimonials.ts` is intentionally empty. No stock or AI-generated people/office imagery is used. Photography is from the owner-supplied images/ directory. Portrait names follow source filenames; roles are not inferred. The provisional wordmark is code-native artwork.
 
 ## Launch workflow
 
-Update centralized data → add approved photography/content → verify provider URLs and redirects → `npm ci` → `npm run build` → `npm run typecheck` → `npm run test:e2e` → review production preview → deploy after owner content approval. Protect preview deployments from indexing using hosting access protection or `X-Robots-Tag: noindex`; the committed robots configuration is for the final production domain.
+Update centralized data → approve final photography/content → verify provider URLs and redirects → `npm ci` → `npm run build` → `npm run typecheck` → `npm run test:e2e` → review production preview → deploy after owner content approval. Protect preview deployments from indexing using hosting access protection or `X-Robots-Tag: noindex`; the committed robots configuration is for the final production domain.

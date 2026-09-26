@@ -1396,6 +1396,203 @@ main:focus {
     gap: 35px;
   }
 }
+.practice-photo {
+  overflow: hidden;
+  border-radius: 4px;
+  background: #e6e8e2;
+}
+.practice-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-photo {
+  border-radius: 4px 4px 70px 4px;
+  aspect-ratio: 1.05;
+}
+.hero-photo img,
+.page-lead-photo img,
+.landscape-photo img {
+  height: 100%;
+  object-fit: cover;
+}
+.doctor-portrait {
+  max-width: 470px;
+  width: 100%;
+  justify-self: center;
+}
+.doctor-portrait img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px 24px;
+}
+.photo-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+.photo-gallery .practice-photo {
+  aspect-ratio: 3 / 2;
+}
+.photo-gallery img {
+  height: 100%;
+  object-fit: cover;
+}
+.photo-gallery figcaption {
+  color: var(--muted);
+  font-size: 0.83rem;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+.team-intro,
+.local-roots {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+.team-intro .text-link,
+.local-roots .text-link {
+  margin-top: 18px;
+}
+.team-photo img,
+.about-team-photo img {
+  width: 100%;
+  height: auto;
+}
+.about-team-photo {
+  max-width: 1100px;
+  margin: auto;
+}
+.about-team-photo + .team-grid {
+  margin-top: 45px;
+}
+.local-roots {
+  grid-template-columns: 1fr 1.3fr;
+}
+.landscape-photo {
+  aspect-ratio: 16 / 10;
+}
+.location-building {
+  margin-bottom: 24px;
+}
+.location-note > svg {
+  display: none;
+}
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.page-hero-with-photo h1 {
+  font-size: clamp(2.7rem, 4.3vw, 3.8rem);
+}
+.page-lead-photo {
+  aspect-ratio: 4 / 3;
+}
+.photo-building-front {
+  aspect-ratio: 16 / 10;
+}
+.office-tour-gallery,
+.equipment-gallery {
+  margin-top: 40px;
+}
+.equipment-gallery .section-heading {
+  margin-bottom: 30px;
+}
+.equipment-gallery .photo-gallery .practice-photo {
+  aspect-ratio: 4 / 5;
+}
+.equipment-gallery .photo-dental-instruments img {
+  object-position: 45% center;
+}
+.office-tour-gallery .photo-massage-chair {
+  aspect-ratio: 3 / 4;
+  max-width: 310px;
+}
+.office-tour-gallery .photo-massage-chair img {
+  object-fit: contain;
+}
+.directions-photo {
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .hero-photo {
+    aspect-ratio: 3 / 4;
+  }
+  .photo-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .team-intro,
+  .local-roots {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .page-hero-grid {
+    gap: 30px;
+  }
+  .page-lead-photo {
+    aspect-ratio: 3 / 4;
+  }
+  .photo-building-front {
+    aspect-ratio: 1;
+  }
+  .location-note {
+    display: block;
+  }
+  .location-building {
+    max-width: 550px;
+  }
+  .location-note .eyebrow {
+    margin-bottom: 15px;
+  }
+  .location-note .text-link {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .hero-photo {
+    aspect-ratio: 4 / 3;
+    border-bottom-right-radius: 45px;
+  }
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .page-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-lead-photo {
+    aspect-ratio: 3 / 2;
+  }
+  .photo-building-front {
+    aspect-ratio: 16 / 9;
+  }
+  .team-intro {
+    gap: 30px;
+  }
+  .team-intro h2,
+  .local-roots h2 {
+    font-size: 2.3rem;
+  }
+  .equipment-gallery .photo-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+  .equipment-gallery figure:last-child {
+    grid-column: 1 / -1;
+  }
+  .equipment-gallery figure:last-child .practice-photo {
+    aspect-ratio: 3 / 2;
+  }
+  .photo-gallery figcaption {
+    font-size: 0.8rem;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

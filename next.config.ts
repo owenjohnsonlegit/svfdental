@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 const config: NextConfig = {
   poweredByHeader: false,
+  images: {
+    loader: "custom",
+    loaderFile: "./src/lib/photo-loader.ts",
+    deviceSizes: [400, 800, 1200, 1600, 2048],
+    imageSizes: [],
+  },
   // Confirm legacy paths against the existing site's sitemap before launch.
   async redirects() {
     return [

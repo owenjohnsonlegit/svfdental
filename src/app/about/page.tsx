@@ -1,6 +1,5 @@
 import {
   PageHero,
-  PhotoPlaceholder,
   SectionHeading,
   StaffCard,
   CTASection,
@@ -9,6 +8,7 @@ import {
 import { staff } from "@/data/staff";
 import { practice } from "@/data/practice";
 import { pageMetadata } from "@/lib/metadata";
+import { PracticePhoto } from "@/components/photography";
 export const metadata = pageMetadata(
   "Meet Dr. Johnson",
   "Meet Richard S. Johnson, DDS, a Cache Valley native practicing in Providence since 2005 and a summa cum laude graduate of Ohio State.",
@@ -26,7 +26,7 @@ export default function About() {
       </PageHero>
       <section className="section">
         <div className="container intro-grid">
-          <PhotoPlaceholder label={practice.dentist} portrait />
+          <PracticePhoto id="richard" className="doctor-portrait" />
           <div className="intro-copy">
             <SectionHeading
               eyebrow="Meet your dentist"
@@ -61,15 +61,37 @@ export default function About() {
               getting to know the dentist.
             </SectionHeading>
           </div>
-          {verifiedStaff.length ? (
+          <PracticePhoto
+            id="team"
+            className="about-team-photo"
+            sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1300px) calc(100vw - 96px), 1200px"
+          />
+          {verifiedStaff.length > 0 && (
             <div className="team-grid">
               {verifiedStaff.map((member) => (
                 <StaffCard key={member.name} member={member} />
               ))}
             </div>
-          ) : (
-            <PhotoPlaceholder label="Meet the South Valley team" />
           )}
+        </div>
+      </section>
+      <section className="section">
+        <div className="container local-roots">
+          <div>
+            <SectionHeading
+              eyebrow="Rooted in Cache Valley"
+              title="A community we call home."
+            >
+              Dr. Johnson returned to Cache Valley to raise his family. It’s the
+              same community our office serves today.
+            </SectionHeading>
+            <TextLink href="/contact">Find our Providence office</TextLink>
+          </div>
+          <PracticePhoto
+            id="valley-east"
+            className="landscape-photo"
+            sizes="(max-width: 900px) calc(100vw - 40px), 720px"
+          />
         </div>
       </section>
       <CTASection />

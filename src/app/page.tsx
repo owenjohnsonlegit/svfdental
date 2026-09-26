@@ -4,7 +4,6 @@ import {
   CallButton,
   TextLink,
   SectionHeading,
-  PhotoPlaceholder,
   ServiceCard,
   CareIcon,
   LocationSection,
@@ -15,6 +14,7 @@ import { practice } from "@/data/practice";
 import { serviceCategories, careFeatures } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 import { pageMetadata } from "@/lib/metadata";
+import { PracticePhoto, PhotoGallery } from "@/components/photography";
 export const metadata = pageMetadata(
   "Family Dentist in Providence, Utah",
   "Local family dental care with Richard S. Johnson, DDS. Serving Providence since 2005. Explore services and call our Cache Valley office to schedule.",
@@ -54,7 +54,12 @@ export default function Home() {
             </p>
           </div>
           <div className="hero-visual">
-            <PhotoPlaceholder label="Our office & team" />
+            <PracticePhoto
+              id="waiting-room-fireplace"
+              className="hero-photo"
+              priority
+              sizes="(max-width: 640px) calc(100vw - 50px), (max-width: 900px) 43vw, 600px"
+            />
             <div className="hero-plaque">
               <span className="plaque-mark">
                 <Heart size={24} strokeWidth={1.4} />
@@ -86,7 +91,7 @@ export default function Home() {
       <section className="section">
         <div className="container intro-grid">
           <div className="doctor-photo">
-            <PhotoPlaceholder label="Richard S. Johnson, DDS" portrait />
+            <PracticePhoto id="richard" className="doctor-portrait" />
             <span className="image-corner-label">A Cache Valley native</span>
           </div>
           <div className="intro-copy">
@@ -166,6 +171,52 @@ export default function Home() {
               Call {practice.phone}
               <ArrowRight size={18} />
             </a>
+          </div>
+        </div>
+      </section>
+      <section className="section section-tint office-preview">
+        <div className="container">
+          <div className="section-top">
+            <SectionHeading
+              eyebrow="Take a look around"
+              title="A place to feel at home."
+            >
+              From the sunny waiting room to the treatment chair, get to know
+              our office before your first visit.
+            </SectionHeading>
+            <TextLink href="/office-info#office-tour">Tour our office</TextLink>
+          </div>
+          <PhotoGallery
+            items={[
+              {
+                id: "waiting-room-windows",
+                caption: "A sunny spot to settle in",
+              },
+              { id: "reception", caption: "Where your visit begins" },
+              {
+                id: "treatment-room",
+                caption: "A look inside your treatment room",
+              },
+            ]}
+          />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container team-intro">
+          <PracticePhoto
+            id="team"
+            className="team-photo"
+            sizes="(max-width: 900px) calc(100vw - 40px), 720px"
+          />
+          <div>
+            <SectionHeading
+              eyebrow="Real people. Local care."
+              title="Meet the people behind your smile."
+            >
+              Get to know Dr. Johnson and the faces you’ll see around our
+              Providence office.
+            </SectionHeading>
+            <TextLink href="/about">About our practice</TextLink>
           </div>
         </div>
       </section>

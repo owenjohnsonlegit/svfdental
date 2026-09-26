@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "photos:prepare": "node scripts/prepare-photos.mjs",
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^19.0.0",
     "lighthouse": "^13.5.0",
     "prettier": "^3.9.9",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.1.0",
     "typescript": "^5.9.0"
   }

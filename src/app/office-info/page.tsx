@@ -5,7 +5,9 @@ import {
   CallButton,
   ExternalLink,
   CTASection,
+  SectionHeading,
 } from "@/components/ui";
+import { PhotoGallery } from "@/components/photography";
 import { practice, directionsUrl } from "@/data/practice";
 import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
@@ -19,6 +21,7 @@ export default function OfficeInfo() {
       <PageHero
         eyebrow="Make yourself at home"
         title="A little planning. A comfortable visit."
+        photo="reception"
       >
         Everything you need to know before visiting our Providence office.
       </PageHero>
@@ -94,6 +97,41 @@ export default function OfficeInfo() {
               <CallButton label={practice.phone} />
             </div>
           </aside>
+        </div>
+      </section>
+      <section className="section section-tint" id="office-tour">
+        <div className="container">
+          <SectionHeading
+            eyebrow="A tour of our office"
+            title="Get comfortable before you arrive."
+          >
+            Take a look at the places you’ll see during your visit, from the
+            entrance to the treatment room.
+          </SectionHeading>
+          <PhotoGallery
+            className="office-tour-gallery"
+            items={[
+              { id: "building-west", caption: "Our office and parking area" },
+              {
+                id: "waiting-room-wide",
+                caption: "The waiting area, with reception just beyond",
+              },
+              {
+                id: "waiting-room-fireplace",
+                caption: "Seating around the fireplace",
+              },
+              {
+                id: "waiting-room-seating",
+                caption: "Chairs and a sofa beside the windows",
+              },
+              {
+                id: "reception-workspace",
+                caption: "Another look at our reception area",
+              },
+              { id: "treatment-room", caption: "Inside a treatment room" },
+              { id: "massage-chair", caption: "A quiet corner of the office" },
+            ]}
+          />
         </div>
       </section>
       <CTASection />

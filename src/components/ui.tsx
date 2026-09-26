@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -19,6 +18,7 @@ import { practice, directionsUrl } from "@/data/practice";
 import { serviceCategories } from "@/data/services";
 import type { StaffMember } from "@/data/staff";
 import type { Testimonial } from "@/data/testimonials";
+import { PracticePhoto, type PhotoId } from "./photography";
 
 const icons: Record<string, LucideIcon> = {
   shield: ShieldCheck,
@@ -108,17 +108,24 @@ export function PageHero({
   eyebrow,
   title,
   children,
+  photo,
 }: {
   eyebrow: string;
   title: string;
   children: React.ReactNode;
+  photo?: PhotoId;
 }) {
   return (
-    <section className="page-hero">
-      <div className="container">
-        <p className="eyebrow">{eyebrow}</p>
-        <h1>{title}</h1>
-        <p className="lede">{children}</p>
+    <section className={`page-hero ${photo ? "page-hero-with-photo" : ""}`}>
+      <div className={`container ${photo ? "page-hero-grid" : ""}`}>
+        <div>
+          <p className="eyebrow">{eyebrow}</p>
+          <h1>{title}</h1>
+          <p className="lede">{children}</p>
+        </div>
+        {photo && (
+          <PracticePhoto id={photo} className="page-lead-photo" priority />
+        )}
       </div>
     </section>
   );
@@ -203,6 +210,11 @@ export function LocationSection() {
           <OfficeHours />
         </div>
         <div className="location-note">
+          <PracticePhoto
+            id="building-close"
+            className="location-building"
+            sizes="(max-width: 640px) calc(100vw - 88px), 400px"
+          />
           <MapPin size={32} strokeWidth={1.3} aria-hidden="true" />
           <p className="eyebrow">Providence, Utah</p>
           <h3>
@@ -260,13 +272,10 @@ export function ServiceCard({
 export function StaffCard({ member }: { member: StaffMember }) {
   return (
     <article className="staff-card">
-      {member.image ? (
-        <Image
-          src={member.image}
-          width={480}
-          height={560}
-          sizes="(max-width: 640px) 100vw, 33vw"
-          alt={member.name}
+      {member.photo ? (
+        <PracticePhoto
+          id={member.photo}
+          sizes="(max-width: 640px) calc(100vw - 40px), 400px"
         />
       ) : (
         <PhotoPlaceholder label={`Portrait of ${member.name}`} portrait />

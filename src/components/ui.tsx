@@ -1,0 +1,287 @@
+import Link from "next/link";
+import Image from "next/image";
+import {
+  ArrowUpRight,
+  ArrowRight,
+  Phone,
+  MapPin,
+  ShieldCheck,
+  Heart,
+  Users,
+  ScanLine,
+  Sparkles,
+  Smile,
+  Plus,
+  CircleCheck,
+  type LucideIcon,
+} from "lucide-react";
+import { practice, directionsUrl } from "@/data/practice";
+import { serviceCategories } from "@/data/services";
+import type { StaffMember } from "@/data/staff";
+import type { Testimonial } from "@/data/testimonials";
+
+const icons: Record<string, LucideIcon> = {
+  shield: ShieldCheck,
+  heart: Heart,
+  users: Users,
+  scan: ScanLine,
+  sparkles: Sparkles,
+  smile: Smile,
+  plus: Plus,
+  tooth: CircleCheck,
+};
+export function CareIcon({ name }: { name: string }) {
+  const Icon = icons[name] ?? Smile;
+  return <Icon size={26} strokeWidth={1.5} aria-hidden="true" />;
+}
+export function CallButton({
+  label = "Call to schedule",
+  secondary = false,
+}: {
+  label?: string;
+  secondary?: boolean;
+}) {
+  return (
+    <a
+      className={`button ${secondary ? "button-light" : "button-primary"}`}
+      href={practice.phoneHref}
+    >
+      <Phone size={17} aria-hidden="true" />
+      {label}
+    </a>
+  );
+}
+export function TextLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link className="text-link" href={href}>
+      {children}
+      <ArrowRight size={18} aria-hidden="true" />
+    </Link>
+  );
+}
+export function ExternalLink({
+  href,
+  children,
+  className = "text-link",
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+      <ArrowUpRight size={17} aria-hidden="true" />
+      <span className="sr-only"> (opens in a new tab)</span>
+    </a>
+  );
+}
+export function SectionHeading({
+  eyebrow,
+  title,
+  children,
+}: {
+  eyebrow: string;
+  title: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div className="section-heading">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      {children && <p className="lede">{children}</p>}
+    </div>
+  );
+}
+export function PageHero({
+  eyebrow,
+  title,
+  children,
+}: {
+  eyebrow: string;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="page-hero">
+      <div className="container">
+        <p className="eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+        <p className="lede">{children}</p>
+      </div>
+    </section>
+  );
+}
+export function PhotoPlaceholder({
+  label,
+  portrait = false,
+}: {
+  label: string;
+  portrait?: boolean;
+}) {
+  return (
+    <div
+      className={`photo-placeholder ${portrait ? "portrait-placeholder" : ""}`}
+      role="img"
+      aria-label={`${label} placeholder; practice photography to be added`}
+    >
+      <div className="photo-monogram" aria-hidden="true">
+        SV<span>FAMILY DENTAL</span>
+      </div>
+      <span className="photo-caption">
+        {label}
+        <span>Practice photography coming soon</span>
+      </span>
+    </div>
+  );
+}
+export function OfficeHours() {
+  return (
+    <div className="office-hours">
+      <dl>
+        {practice.hours.map((hour) => (
+          <div key={hour.day}>
+            <dt>{hour.day}</dt>
+            <dd>
+              {hour.time}
+              {hour.note && <small>{hour.note}</small>}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      <p className="fine-print">
+        Please call to confirm office hours before your visit.
+      </p>
+    </div>
+  );
+}
+export function Address() {
+  return (
+    <address>
+      {practice.address.street}
+      <br />
+      {practice.address.city}, {practice.address.region}{" "}
+      {practice.address.postalCode}
+    </address>
+  );
+}
+export function ContactCard() {
+  return (
+    <div className="contact-card">
+      <p className="eyebrow">Find us in Providence</p>
+      <h2>
+        Your neighborhood
+        <br />
+        dental office.
+      </h2>
+      <Address />
+      <a className="phone-link" href={practice.phoneHref}>
+        {practice.phone}
+      </a>
+      <ExternalLink href={directionsUrl}>Get directions</ExternalLink>
+    </div>
+  );
+}
+export function LocationSection() {
+  return (
+    <section className="section" id="location">
+      <div className="container location-grid">
+        <ContactCard />
+        <div className="hours-panel">
+          <h3>Office hours</h3>
+          <OfficeHours />
+        </div>
+        <div className="location-note">
+          <MapPin size={32} strokeWidth={1.3} aria-hidden="true" />
+          <p className="eyebrow">Providence, Utah</p>
+          <h3>
+            Close to home.
+            <br />
+            Here for your smile.
+          </h3>
+          <p>Find our office on Springcreek Parkway in Cache Valley.</p>
+          <ExternalLink href={directionsUrl}>Open in Google Maps</ExternalLink>
+        </div>
+      </div>
+    </section>
+  );
+}
+export function CTASection() {
+  return (
+    <section className="cta-section">
+      <div className="container cta-inner">
+        <div>
+          <p className="eyebrow">Let’s take care of your smile</p>
+          <h2>Ready to schedule your visit?</h2>
+          <p>Give our Providence office a call. We’re happy to help.</p>
+        </div>
+        <div className="cta-actions">
+          <CallButton label={practice.phone} secondary />
+          <Link href="/contact">
+            Contact our office <ArrowRight size={16} aria-hidden="true" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+export function ServiceCard({
+  category,
+  index,
+}: {
+  category: (typeof serviceCategories)[number];
+  index: number;
+}) {
+  return (
+    <Link href={`/services#${category.id}`} className="service-card">
+      <div className="service-card-top">
+        <CareIcon name={category.icon} />
+        <span>0{index + 1}</span>
+      </div>
+      <h3>{category.name}</h3>
+      <p>{category.intro}</p>
+      <span className="service-card-bottom">
+        Explore care <ArrowRight size={18} aria-hidden="true" />
+      </span>
+    </Link>
+  );
+}
+export function StaffCard({ member }: { member: StaffMember }) {
+  return (
+    <article className="staff-card">
+      {member.image ? (
+        <Image
+          src={member.image}
+          width={480}
+          height={560}
+          sizes="(max-width: 640px) 100vw, 33vw"
+          alt={member.name}
+        />
+      ) : (
+        <PhotoPlaceholder label={`Portrait of ${member.name}`} portrait />
+      )}
+      <h3>{member.name}</h3>
+      {member.role && <p className="eyebrow">{member.role}</p>}
+      {member.bio && <p>{member.bio}</p>}
+    </article>
+  );
+}
+export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  return (
+    <figure className="testimonial-card">
+      <blockquote>“{testimonial.quote}”</blockquote>
+      <figcaption>{testimonial.attribution}</figcaption>
+    </figure>
+  );
+}

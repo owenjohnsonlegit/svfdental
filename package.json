@@ -1,0 +1,34 @@
+{
+  "name": "south-valley-family-dental",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "qa:visual": "node scripts/visual-check.mjs",
+    "qa:lighthouse": "lighthouse http://127.0.0.1:3000 --chrome-flags=--headless --output=json --output=html --output-path=./qa/lighthouse --quiet",
+    "format": "prettier --write src tests *.ts *.json *.mjs *.md",
+    "format:check": "prettier --check src tests *.ts *.json *.mjs *.md"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "next": "16.3.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.51.1",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "lighthouse": "^13.5.0",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0"
+  }
+}

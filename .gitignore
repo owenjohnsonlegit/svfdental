@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.env*
+!.env.example
+qa/*.png
+qa/*.html
+qa/*.json

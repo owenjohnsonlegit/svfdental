@@ -33,18 +33,23 @@ export default function About() {
               title={practice.dentist}
             />
             <p>
-              Dr. Johnson earned his Doctor of Dental Surgery degree from The
-              Ohio State University College of Dentistry, where he graduated
-              summa cum laude.
+              Dr. Johnson received his Doctor of Dental Surgery Degree from The
+              Ohio State University College of Dentistry. He graduated with summa
+              cum laude honors and has been practicing in Providence since 2005.
             </p>
             <p>
-              A Cache Valley native, he returned to the area to raise his family
-              and has been practicing in Providence since 2005. He continues his
-              dental education as part of his commitment to patient care.
+              His education as a dentist did not end when he received his diploma.
+              As a health care professional, he feels a responsibility to continue
+              to learn about the latest treatments in dentistry. &quot;I owe it to
+              my patients to educate myself of their dental needs. And provide
+              them with the same care as I would my family.&quot;
             </p>
             <p>
-              At South Valley Family Dental, local roots and a focus on family
-              are part of who we are.
+              Dr. Johnson is married and has four children. He is a native of
+              Cache Valley and feels blessed to have been able to move back home
+              to raise his family. When he isn&apos;t taking care of teeth he
+              enjoys fishing the Madison River in Montana and cheering on the
+              Aggies.
             </p>
             <TextLink href="/contact">Get in touch with our office</TextLink>
           </div>

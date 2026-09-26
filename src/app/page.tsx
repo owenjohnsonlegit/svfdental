@@ -92,7 +92,7 @@ export default function Home() {
         <div className="container intro-grid">
           <div className="doctor-photo">
             <PracticePhoto id="richard" className="doctor-portrait" />
-            <span className="image-corner-label">A Cache Valley native</span>
+            <span className="image-corner-label">{practice.dentist}</span>
           </div>
           <div className="intro-copy">
             <SectionHeading

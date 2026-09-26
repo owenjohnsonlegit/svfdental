@@ -65,7 +65,7 @@ export default function Home() {
                 <Heart size={24} strokeWidth={1.4} />
               </span>
               <div>
-                <strong>A local practice. A personal approach.</strong>
+                <strong>Healthy smiles. Personal care.</strong>
                 <span>{practice.dentist}</span>
               </div>
             </div>

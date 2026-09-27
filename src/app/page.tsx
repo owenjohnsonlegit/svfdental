@@ -4,14 +4,13 @@ import {
   CallButton,
   TextLink,
   SectionHeading,
-  ServiceCard,
   CareIcon,
   LocationSection,
   CTASection,
   TestimonialCard,
 } from "@/components/ui";
 import { practice } from "@/data/practice";
-import { serviceCategories, careFeatures } from "@/data/services";
+import { careFeatures } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 import { pageMetadata } from "@/lib/metadata";
 import { PracticePhoto, PhotoGallery } from "@/components/photography";
@@ -116,36 +115,6 @@ export default function Home() {
             </p>
             <p>Let us help you achieve the smile you’ve been looking for.</p>
             <TextLink href="/about">Meet Dr. Johnson</TextLink>
-          </div>
-        </div>
-      </section>
-      <section className="section section-tint">
-        <div className="container">
-          <div className="section-top">
-            <SectionHeading
-              eyebrow="Dental Services"
-              title="Services for the Whole Family"
-            >
-              We offer a wide range of dental services, including routine
-              checkups, cosmetic dentistry, prosthetics, and endodontic
-              treatment.
-            </SectionHeading>
-            <TextLink href="/services">View all services</TextLink>
-          </div>
-          <ul>
-            <li>Routine Checkups (General Cleanings, Gum Treatment)</li>
-            <li>Cosmetic Dentistry (Bonding, Veneers, Teeth Whitening)</li>
-            <li>Prosthetics (Bridges, Crowns, Implants, Dentures)</li>
-            <li>Endodontic Treatment (Root Canals, Pulpotomies)</li>
-          </ul>
-          <div className="service-grid">
-            {serviceCategories.map((category, index) => (
-              <ServiceCard
-                key={category.id}
-                category={category}
-                index={index}
-              />
-            ))}
           </div>
         </div>
       </section>

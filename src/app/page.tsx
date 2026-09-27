@@ -118,6 +118,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="section section-tint office-preview">
+        <div className="container">
+          <div className="section-top">
+            <SectionHeading eyebrow="Office Information" title="Our Office">
+              Take a look at our waiting room, reception area, and treatment
+              rooms.
+            </SectionHeading>
+            <TextLink href="/office-info#office-tour">Tour our office</TextLink>
+          </div>
+          <PhotoGallery
+            items={[
+              {
+                id: "waiting-room-windows",
+                caption: "Waiting Room",
+              },
+              { id: "reception", caption: "Reception" },
+              {
+                id: "treatment-room",
+                caption: "Treatment Room",
+              },
+            ]}
+          />
+        </div>
+      </section>
       <section className="section">
         <div className="container">
           <div className="center-heading">
@@ -155,30 +179,6 @@ export default function Home() {
               <ArrowRight size={18} />
             </a>
           </div>
-        </div>
-      </section>
-      <section className="section section-tint office-preview">
-        <div className="container">
-          <div className="section-top">
-            <SectionHeading eyebrow="Office Information" title="Our Office">
-              Take a look at our waiting room, reception area, and treatment
-              rooms.
-            </SectionHeading>
-            <TextLink href="/office-info#office-tour">Tour our office</TextLink>
-          </div>
-          <PhotoGallery
-            items={[
-              {
-                id: "waiting-room-windows",
-                caption: "Waiting Room",
-              },
-              { id: "reception", caption: "Reception" },
-              {
-                id: "treatment-room",
-                caption: "Treatment Room",
-              },
-            ]}
-          />
         </div>
       </section>
       <section className="section">

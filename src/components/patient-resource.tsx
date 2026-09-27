@@ -9,12 +9,12 @@ export function PatientResource({ type }: { type: "forms" | "payment" }) {
     <>
       <PageHero
         eyebrow="Patient resources"
-        title={forms ? "Patient forms" : "Make a payment"}
+        title={forms ? "Patient Forms" : "Make a Payment"}
         photo="reception"
       >
         {forms
-          ? "Prepare for your visit with help from our office."
-          : "Our office can help with your payment questions."}
+          ? "Complete your patient forms online."
+          : "Need to pay your bill? You can make a payment online through our secure payment platform."}
       </PageHero>
       <section className="section">
         <div className="container">
@@ -33,7 +33,7 @@ export function PatientResource({ type }: { type: "forms" | "payment" }) {
                   {forms ? "patient forms" : "payment"} service in a new tab.
                 </p>
                 <ExternalLink className="button button-primary" href={url}>
-                  {forms ? "Open patient forms" : "Open payment service"}
+                  {forms ? "Access Patient Forms" : "Make a Payment"}
                 </ExternalLink>
               </>
             ) : (

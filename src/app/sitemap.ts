@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/office-info",
     "/services",
     "/about",
+    "/testimonials",
     "/contact",
     "/patient-forms",
     "/make-a-payment",

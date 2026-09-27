@@ -3,10 +3,7 @@ import { PageHero } from "@/components/ui";
 export default function NotFound() {
   return (
     <>
-      <PageHero
-        eyebrow="404 · Page not found"
-        title="Let’s get you back on track."
-      >
+      <PageHero eyebrow="404 · Page not found" title="Page Not Found">
         The page you’re looking for may have moved.
       </PageHero>
       <div className="container section">

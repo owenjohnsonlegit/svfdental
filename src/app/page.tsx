@@ -28,7 +28,7 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow">
               <span className="eyebrow-line" />
-              Your family. Your smile. Your dentist.
+              South Valley Family Dental
             </p>
             <h1>
               Dental care
@@ -38,19 +38,20 @@ export default function Home() {
               <em>whole family.</em>
             </h1>
             <p className="hero-description">
-              Family dentistry with a personal touch, right here in Providence,
-              Utah.
+              At South Valley Family Dental, you are not simply a customer to
+              us, but a patient. We want you to have an enjoyable and pleasant
+              experience at our dental office.
             </p>
             <div className="hero-actions">
               <CallButton />
               <Link className="button button-outline" href="/services">
-                Explore our services
+                View Our Services
                 <ArrowRight size={17} aria-hidden="true" />
               </Link>
             </div>
             <p className="hero-footnote">
               <MapPin size={16} aria-hidden="true" />
-              Rooted in Cache Valley. Practicing in Providence since 2005.
+              Providence, Utah · Se habla español.
             </p>
           </div>
           <div className="hero-visual">
@@ -65,7 +66,7 @@ export default function Home() {
                 <Heart size={24} strokeWidth={1.4} />
               </span>
               <div>
-                <strong>Healthy smiles. Personal care.</strong>
+                <strong>South Valley Family Dental</strong>
                 <span>{practice.dentist}</span>
               </div>
             </div>
@@ -96,20 +97,24 @@ export default function Home() {
           </div>
           <div className="intro-copy">
             <SectionHeading
-              eyebrow="A familiar face in your community"
-              title="Your family’s dentist. Your neighbor, too."
+              eyebrow="Welcome to South Valley Family Dental"
+              title="Your Dentist in Providence, Utah"
             />
             <p>
-              A Cache Valley native, Dr. Richard S. Johnson returned to the area
-              to raise his family and has been practicing in Providence since
-              2005.
+              Going to the dentist should be a pleasant experience for you and
+              your whole family. Come see us at South Valley Family Dental and
+              give your teeth the attention they deserve.
             </p>
             <p>
-              He earned his Doctor of Dental Surgery degree from The Ohio State
-              University College of Dentistry, graduating summa cum laude.
-              Continuing dental education remains part of his commitment to
-              patient care.
+              Your health and comfort are our number one priority at South
+              Valley Family Dental.
             </p>
+            <p>
+              If, for any reason, we feel a procedure would be better performed
+              by a specialist, we will refer you to a doctor equipped to handle
+              your specific needs.
+            </p>
+            <p>Let us help you achieve the smile you’ve been looking for.</p>
             <TextLink href="/about">Meet Dr. Johnson</TextLink>
           </div>
         </div>
@@ -118,14 +123,21 @@ export default function Home() {
         <div className="container">
           <div className="section-top">
             <SectionHeading
-              eyebrow="Care for every chapter"
-              title="Healthy smiles, at every stage."
+              eyebrow="Dental Services"
+              title="Services for the Whole Family"
             >
-              From regular cleanings to restorative treatment, find care for
-              your family’s dental needs.
+              We offer a wide range of dental services, including routine
+              checkups, cosmetic dentistry, prosthetics, and endodontic
+              treatment.
             </SectionHeading>
             <TextLink href="/services">View all services</TextLink>
           </div>
+          <ul>
+            <li>Routine Checkups (General Cleanings, Gum Treatment)</li>
+            <li>Cosmetic Dentistry (Bonding, Veneers, Teeth Whitening)</li>
+            <li>Prosthetics (Bridges, Crowns, Implants, Dentures)</li>
+            <li>Endodontic Treatment (Root Canals, Pulpotomies)</li>
+          </ul>
           <div className="service-grid">
             {serviceCategories.map((category, index) => (
               <ServiceCard
@@ -141,11 +153,11 @@ export default function Home() {
         <div className="container">
           <div className="center-heading">
             <SectionHeading
-              eyebrow="The South Valley approach"
-              title="The little things that make care feel personal."
+              eyebrow="Your Visit"
+              title="Your Health and Comfort"
             >
-              A focus on your comfort, your family, and the details of your
-              care.
+              Your health and comfort are our number one priority at South
+              Valley Family Dental.
             </SectionHeading>
           </div>
           <div className="feature-grid">
@@ -161,10 +173,12 @@ export default function Home() {
           </div>
           <div className="emergency-note">
             <div>
-              <strong>A dental concern that can’t wait?</strong>
+              <strong>Dental Emergencies</strong>
               <p>
-                We reserve appointment time for emergency needs. Call us to
-                discuss your situation.
+                We realize that dental pain can’t always wait. Appointment times
+                are reserved to help us address emergency dental needs promptly,
+                so please call our office if you are experiencing a dental
+                emergency.
               </p>
             </div>
             <a className="text-link" href={practice.phoneHref}>
@@ -177,12 +191,9 @@ export default function Home() {
       <section className="section section-tint office-preview">
         <div className="container">
           <div className="section-top">
-            <SectionHeading
-              eyebrow="Take a look around"
-              title="A place to feel at home."
-            >
-              From the sunny waiting room to the treatment chair, get to know
-              our office before your first visit.
+            <SectionHeading eyebrow="Office Information" title="Our Office">
+              Take a look at our waiting room, reception area, and treatment
+              rooms.
             </SectionHeading>
             <TextLink href="/office-info#office-tour">Tour our office</TextLink>
           </div>
@@ -190,12 +201,12 @@ export default function Home() {
             items={[
               {
                 id: "waiting-room-windows",
-                caption: "A sunny spot to settle in",
+                caption: "Waiting Room",
               },
-              { id: "reception", caption: "Where your visit begins" },
+              { id: "reception", caption: "Reception" },
               {
                 id: "treatment-room",
-                caption: "A look inside your treatment room",
+                caption: "Treatment Room",
               },
             ]}
           />
@@ -209,14 +220,17 @@ export default function Home() {
             sizes="(max-width: 900px) calc(100vw - 40px), 720px"
           />
           <div>
-            <SectionHeading
-              eyebrow="Real people. Local care."
-              title="Meet the people behind your smile."
-            >
-              Get to know Dr. Johnson and the faces you’ll see around our
-              Providence office.
+            <SectionHeading eyebrow="Meet Our Staff" title="Learn Who We Are">
+              It’s important to know you’re in good hands when someone is caring
+              for your teeth.
             </SectionHeading>
-            <TextLink href="/about">About our practice</TextLink>
+            <p>
+              We follow the golden rule: treat others as you would like to be
+              treated. We see hundreds of patients each month and strive to
+              treat everyone with respect and kindness while remaining
+              professional in our work.
+            </p>
+            <TextLink href="/about">Meet Our Team</TextLink>
           </div>
         </div>
       </section>
@@ -224,13 +238,13 @@ export default function Home() {
         <section className="section section-tint">
           <div className="container">
             <SectionHeading
-              eyebrow="From our patients"
-              title="A few words from our community."
+              eyebrow="Testimonials"
+              title="What Our Patients Say About Us"
             />
             <div className="service-grid">
               {testimonials
                 .filter((t) => t.approved)
-                .slice(0, 3)
+                .slice(0, 4)
                 .map((t) => (
                   <TestimonialCard key={t.quote} testimonial={t} />
                 ))}
@@ -238,6 +252,49 @@ export default function Home() {
           </div>
         </section>
       )}
+      <section className="section section-tint">
+        <div className="container">
+          <SectionHeading eyebrow="Dental Care" title="Featured Services" />
+          <div className="service-grid">
+            <article className="feature">
+              <h3>General Dentistry</h3>
+              <p>
+                General dentistry encompasses a range of services and procedures
+                with a common goal: to help preserve your natural teeth,
+                maintain your oral health, and keep you looking and feeling your
+                best.
+              </p>
+              <TextLink href="/services">General Dentistry</TextLink>
+            </article>
+            <article className="feature">
+              <h3>Teeth Whitening</h3>
+              <p>
+                Whitening procedures can help restore the appearance of stained,
+                dull, or discolored teeth.
+              </p>
+              <TextLink href="/services#cosmetic">Teeth Whitening</TextLink>
+            </article>
+            <article className="feature">
+              <h3>Kids Club</h3>
+              <p>
+                Help the crew of USS Sugar Swatters keep the galaxy free of
+                destructive sugars!
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <SectionHeading eyebrow="Patient Resources" title="Make a Payment">
+            Need to pay your bill? You can make a payment online through our
+            secure payment platform.
+          </SectionHeading>
+          <TextLink href={practice.externalPaymentUrl ?? "/make-a-payment"}>
+            Make a Payment
+          </TextLink>
+        </div>
+      </section>
       <LocationSection />
       <CTASection />
     </>

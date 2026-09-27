@@ -19,17 +19,19 @@ export default function OfficeInfo() {
   return (
     <>
       <PageHero
-        eyebrow="Make yourself at home"
-        title="A little planning. A comfortable visit."
+        eyebrow="Office Information"
+        title="Our Location"
         photo="reception"
       >
-        Everything you need to know before visiting our Providence office.
+        This page provides practical information about our practice, including
+        our location, directions, office hours, appointment scheduling,
+        insurance, billing, and payment policies.
       </PageHero>
       <section className="section">
         <div className="container content-grid">
           <div className="content-stack">
             <section>
-              <h2>Come see us in Providence.</h2>
+              <h2>South Valley Family Dental in Providence</h2>
               <p>
                 {practice.name}
                 <br />
@@ -43,43 +45,63 @@ export default function OfficeInfo() {
             <section>
               <h2>Appointments</h2>
               <p>
-                To schedule a visit, call{" "}
-                <a className="text-link" href={practice.phoneHref}>
-                  {practice.phone}
-                </a>
-                . If you cannot keep an appointment or expect to be late, please
-                call the office so we can help.
+                We know you have many choices when choosing a dentist in Cache
+                Valley, so we try to make scheduling an appointment as simple as
+                possible.
+              </p>
+              <p>
+                If, for any reason, you cannot keep a scheduled appointment or
+                expect to be late, please call us as soon as possible.
               </p>
             </section>
             <section id="insurance">
-              <h2>Insurance & billing</h2>
+              <h2>Insurance and Billing</h2>
               <p>
-                Our office accepts most traditional insurance plans and files
-                insurance claims. Please contact us to verify your specific plan
-                and discuss your coverage before your appointment.
+                We accept most traditional insurance plans. Please contact our
+                office to verify acceptance of your specific plan.
               </p>
               <p>
-                The practice does not participate in HMOs. Insurance coverage
-                varies by plan; our team can help with your questions.
-              </p>
-            </section>
-            <section>
-              <h2>Payment options</h2>
-              <p>
-                Payment options include cash, checks, and credit cards. Please
-                call to discuss flexible payment arrangements.
+                South Valley Family Dental does not participate in Health
+                Maintenance Organizations (HMOs); however, we will be happy to
+                file your insurance claims for you.
               </p>
             </section>
             <section>
-              <h2>Financing questions?</h2>
+              <h2>Payment Options</h2>
+              <p>
+                We accept cash, checks, and credit cards. We also offer flexible
+                payment options. Please see our Financial Coordinator for
+                details.
+              </p>
+              <p>
+                We are happy to file insurance claims for your reimbursement as
+                long as you are free to choose your own dentist.
+              </p>
+            </section>
+            <section>
+              <h2>Financing Options</h2>
               <p>
                 Please contact our office to ask about current financing options
                 and CareCredit availability.
               </p>
               {practice.careCreditUrl && (
-                <ExternalLink href={practice.careCreditUrl}>
-                  Explore CareCredit
-                </ExternalLink>
+                <>
+                  <h3>CareCredit</h3>
+                  <p>
+                    CareCredit can help you pay for treatments and procedures
+                    that may not be covered by your insurance. Financing and
+                    monthly payment options may be available for qualifying
+                    patients.
+                  </p>
+                  <p>
+                    Once approved, CareCredit can be used for eligible
+                    healthcare services, including dental treatment.
+                  </p>
+                  <ExternalLink href={practice.careCreditUrl}>
+                    Visit CareCredit for current financing options, terms, or to
+                    apply online
+                  </ExternalLink>
+                </>
               )}
             </section>
           </div>
@@ -89,7 +111,7 @@ export default function OfficeInfo() {
               <OfficeHours />
             </div>
             <div className="info-panel">
-              <h2>We’re here to help.</h2>
+              <h2>Questions About Your Visit?</h2>
               <p>
                 Questions about your visit, insurance, or payment? Give our team
                 a call.
@@ -101,10 +123,7 @@ export default function OfficeInfo() {
       </section>
       <section className="section section-tint" id="office-tour">
         <div className="container">
-          <SectionHeading
-            eyebrow="A tour of our office"
-            title="Get comfortable before you arrive."
-          >
+          <SectionHeading eyebrow="A tour of our office" title="Our Office">
             Take a look at the places you’ll see during your visit, from the
             entrance to the treatment room.
           </SectionHeading>

@@ -17,7 +17,7 @@ export function Footer() {
           <ExternalLink href={directionsUrl}>Get directions</ExternalLink>
         </div>
         <div>
-          <h2>Explore</h2>
+          <h2>Office</h2>
           <nav aria-label="Footer navigation">
             {navigation
               .filter(
@@ -31,7 +31,7 @@ export function Footer() {
           </nav>
         </div>
         <div>
-          <h2>For patients</h2>
+          <h2>Patient Resources</h2>
           <nav aria-label="Patient resources">
             {navigation
               .filter((x) =>
@@ -66,7 +66,7 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {practice.name}. All rights reserved.
         </p>
-        <span>Rooted in Cache Valley.</span>
+        <span>Se habla español.</span>
       </div>
     </footer>
   );

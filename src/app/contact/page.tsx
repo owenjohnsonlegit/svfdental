@@ -12,7 +12,7 @@ import { PracticePhoto } from "@/components/photography";
 import { ExternalLink, SectionHeading } from "@/components/ui";
 import { directionsUrl } from "@/data/practice";
 export const metadata = pageMetadata(
-  "Contact Our Office",
+  "Contact South Valley Family Dental",
   "Call South Valley Family Dental in Providence, Utah. Find our address, directions, office hours, and patient resources.",
   "/contact",
 );
@@ -20,12 +20,11 @@ export default function Contact() {
   return (
     <>
       <PageHero
-        eyebrow="We’re happy to help"
-        title="Let’s talk about your next visit."
+        eyebrow="Contact Us"
+        title="Contact South Valley Family Dental"
         photo="building-front"
       >
-        Call our office to schedule an appointment or ask a question about your
-        care.
+        Call Us to schedule an appointment or ask a question about your care.
       </PageHero>
       <section className="section">
         <div className="container contact-page-grid">
@@ -35,7 +34,7 @@ export default function Contact() {
             </p>
             <ContactCard />
             <div style={{ marginTop: 25 }}>
-              <CallButton label="Call our office" />
+              <CallButton label="Call Us" />
             </div>
           </div>
           <div className="info-panel">
@@ -47,16 +46,11 @@ export default function Contact() {
       <section className="section section-tint">
         <div className="container">
           <div className="section-top">
-            <SectionHeading
-              eyebrow="Find your way here"
-              title="Right here in Providence."
-            >
+            <SectionHeading eyebrow="Directions" title="Our Location">
               See our office in its neighborhood, with Cache Valley’s mountains
               in the distance.
             </SectionHeading>
-            <ExternalLink href={directionsUrl}>
-              Get turn-by-turn directions
-            </ExternalLink>
+            <ExternalLink href={directionsUrl}>Get Directions</ExternalLink>
           </div>
           <PracticePhoto
             id="valley-southeast"
@@ -69,16 +63,16 @@ export default function Contact() {
         <div className="container content-grid">
           <div className="content-stack">
             <section>
-              <h2>Getting ready for your appointment?</h2>
+              <h2>Appointments</h2>
               <p>
                 Find practical information about appointments, insurance, and
                 payment options.
               </p>
-              <TextLink href="/office-info">Plan your visit</TextLink>
+              <TextLink href="/office-info">Office Information</TextLink>
             </section>
           </div>
           <div>
-            <h3>Questions about forms or payments?</h3>
+            <h3>Patient Forms and Payments</h3>
             <p style={{ marginTop: 15 }}>
               Our team can help you access patient forms and the practice’s
               payment service. Please call the office for assistance.

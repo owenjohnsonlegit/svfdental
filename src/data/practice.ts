@@ -32,7 +32,7 @@ export const fullAddress = `${practice.address.street}, ${practice.address.city}
 export const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`;
 export const navigation = [
   { label: "Home", href: "/" },
-  { label: "Office Info", href: "/office-info" },
+  { label: "Office Information", href: "/office-info" },
   { label: "Services", href: "/services" },
   {
     label: "Patient Forms",
@@ -45,5 +45,6 @@ export const navigation = [
     external: !!practice.externalPaymentUrl,
   },
   { label: "About Us", href: "/about" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "Contact Us", href: "/contact" },
 ];

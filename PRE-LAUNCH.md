@@ -8,12 +8,13 @@ The live legacy site returned a Cloudflare challenge during migration on Septemb
 - [ ] Supply and test the **exact patient forms URL** and **exact secure payment URL** with the practice/provider. Set the two centralized URL values; navigation then links directly to the external services. Until then, call-assistance pages are used. Do not substitute a generic provider homepage.
 - [ ] Confirm accepted insurance, claim filing, HMO policy, cash/check/card acceptance, and flexible payment arrangements.
 - [ ] Confirm CareCredit availability and the approved link; no financing terms or provider link are published yet.
-- [ ] Confirm all 17 listed services and approve short edited descriptions against the original site. Treatment availability, orthodontics, implants, TMJ/TMD care, and emergency scheduling need particular attention.
+- [ ] Confirm the listed services and descriptions from the owner-supplied copy. Treatment availability, orthodontics, implants, TMJ/TMD care, and emergency scheduling need particular attention.
+- [ ] Confirm the Kids Club / USS Sugar Swatters program and electronic quieter drill system mentioned in the supplied copy.
 - [ ] Confirm digital X-rays, intraoral pictures, nitrous oxide, child-friendly staff training, sterilization/autoclaving, and infection-control statements.
 - [ ] Confirm Dr. Johnson’s degree, institution, summa cum laude distinction, Providence practice since 2005, continuing education, and Cache Valley/family background.
-- [ ] Verify current staff roster, roles, biographies, and portrait permissions. Individual staff entries remain unverified and unpublished. Owner-supplied portraits of Paige, Bethany, and Teresa are prepared; the group photograph is displayed without individual labels. Set each approved member’s `verified` flag only after review.
-- [ ] Supply original testimonials, attribution, source, and permission to publish. Deduplicate before marking `approved`; the section stays hidden until then. No ratings or reviews have been invented.
-- [ ] Confirm Spanish-language availability before adding “Se habla español” (currently omitted).
+- [ ] Verify current staff roster, roles, biographies, and portrait permissions. The seven biographies in the owner-supplied copy are displayed for review; current employment still needs confirmation. Bethany is omitted because she is not included in that copy. Owner-supplied portraits of Paige, Bethany, and Teresa are prepared; the group photograph is displayed without individual labels. The `verified` flag tracks roster confirmation and is not used to hide owner-requested draft copy.
+- [ ] Confirm testimonial publication permissions before launch. The four owner-supplied patient quotations and attributions are now displayed verbatim on Home and Testimonials.
+- [ ] Confirm Spanish-language availability for launch; “Se habla español” is included as requested in the supplied copy.
 - [ ] Confirm official social links (currently omitted).
 - [x] Review and integrate owner-supplied photography. All 26 images are classified in PHOTO-INVENTORY.md; selected office, dentist, team, exterior, equipment, and valley photos now replace public placeholders. Responsive WebP copies preserve originals and use intrinsic dimensions, alt text, and lazy loading.
 - [ ] Confirm the three individual staff names/current employment before enabling their prepared portrait cards.
@@ -24,8 +25,12 @@ The live legacy site returned a Cloudflare challenge during migration on Septemb
 
 ## Content and asset provenance
 
-`src/data/practice.ts`, `services.ts`, and `staff.ts` use the provided redesign brief. Service descriptions are conservative editorial summaries pending comparison to the inaccessible original descriptions. `testimonials.ts` is intentionally empty. No stock or AI-generated people/office imagery is used. Photography is from the owner-supplied images/ directory. Portrait names follow source filenames; roles are not inferred. The provisional wordmark is code-native artwork.
+`src/data/practice.ts`, `services.ts`, and `staff.ts` use the provided redesign brief. Page copy, service descriptions, staff biographies, and testimonials now follow the owner-supplied Updated Website Copy. `testimonials.ts` contains the four owner-supplied quotations. No stock or AI-generated people/office imagery is used. Photography is from the owner-supplied images/ directory. Portrait names follow source filenames; roles are not inferred. The provisional wordmark is code-native artwork.
 
 ## Launch workflow
 
 Update centralized data → approve final photography/content → verify provider URLs and redirects → `npm ci` → `npm run build` → `npm run typecheck` → `npm run test:e2e` → review production preview → deploy after owner content approval. Protect preview deployments from indexing using hosting access protection or `X-Robots-Tag: noindex`; the committed robots configuration is for the final production domain.
+
+## Copy update
+
+Applied the owner-supplied Updated Website Copy throughout the site. Thursday remains “Call to confirm.” CareCredit details are conditional on a confirmed provider URL. Patient forms and payment URLs remain unset, with call-assistance pages. No FAQ or Privacy Policy link was added because neither an approved page nor a destination was supplied. Insurance text links to existing office information instead of an unavailable FAQ.

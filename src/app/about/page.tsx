@@ -10,19 +10,17 @@ import { practice } from "@/data/practice";
 import { pageMetadata } from "@/lib/metadata";
 import { PracticePhoto } from "@/components/photography";
 export const metadata = pageMetadata(
-  "Meet Dr. Johnson",
+  "About Us",
   "Meet Richard S. Johnson, DDS, a Cache Valley native practicing in Providence since 2005 and a summa cum laude graduate of Ohio State.",
   "/about",
 );
 export default function About() {
-  const verifiedStaff = staff.filter((s) => s.verified);
+  const displayedStaff = staff;
   return (
     <>
-      <PageHero
-        eyebrow="Our roots run local"
-        title="A familiar face. A lasting connection."
-      >
-        Get to know the dentist behind South Valley Family Dental.
+      <PageHero eyebrow="About Us" title="Dental Staff">
+        It’s important to know you’re in good hands when someone is caring for
+        your teeth.
       </PageHero>
       <section className="section">
         <div className="container intro-grid">
@@ -33,23 +31,29 @@ export default function About() {
               title={practice.dentist}
             />
             <p>
-              Dr. Johnson received his Doctor of Dental Surgery Degree from The
-              Ohio State University College of Dentistry. He graduated with summa
-              cum laude honors and has been practicing in Providence since 2005.
+              Dr. Johnson received his Doctor of Dental Surgery degree from The
+              Ohio State University College of Dentistry. He graduated with
+              summa cum laude honors and has been practicing in Providence since
+              2005.
             </p>
             <p>
-              His education as a dentist did not end when he received his diploma.
-              As a health care professional, he feels a responsibility to continue
-              to learn about the latest treatments in dentistry. &quot;I owe it to
-              my patients to educate myself of their dental needs. And provide
-              them with the same care as I would my family.&quot;
+              His education as a dentist did not end when he received his
+              diploma. As a healthcare professional, he feels a responsibility
+              to continue learning about the latest treatments in dentistry.
+            </p>
+            <p>
+              “I owe it to my patients to educate myself about their dental
+              needs and provide them with the same care I would provide my
+              family.”
             </p>
             <p>
               Dr. Johnson is married and has four children. He is a native of
               Cache Valley and feels blessed to have been able to move back home
-              to raise his family. When he isn&apos;t taking care of teeth he
-              enjoys fishing the Madison River in Montana and cheering on the
-              Aggies.
+              to raise his family.
+            </p>
+            <p>
+              When he isn’t taking care of teeth, he enjoys fishing the Madison
+              River in Montana and cheering on the Aggies.
             </p>
             <TextLink href="/contact">Get in touch with our office</TextLink>
           </div>
@@ -59,21 +63,27 @@ export default function About() {
         <div className="container">
           <div className="section-top">
             <SectionHeading
-              eyebrow="The people behind your care"
-              title="A team focused on your family."
+              eyebrow="South Valley Family Dental"
+              title="Meet the Staff"
             >
-              Our staff helps patients feel comfortable, including children
-              getting to know the dentist.
+              Our staff at South Valley Family Dental is committed to sincerely
+              listening to your concerns. We take pride in getting to know our
+              patients and want you to feel at home in our office.
             </SectionHeading>
           </div>
+          <p>
+            Our dental staff is trained to help you with your dental needs, from
+            proper flossing techniques to questions about payments and
+            insurance.
+          </p>
           <PracticePhoto
             id="team"
             className="about-team-photo"
             sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1300px) calc(100vw - 96px), 1200px"
           />
-          {verifiedStaff.length > 0 && (
+          {displayedStaff.length > 0 && (
             <div className="team-grid">
-              {verifiedStaff.map((member) => (
+              {displayedStaff.map((member) => (
                 <StaffCard key={member.name} member={member} />
               ))}
             </div>
@@ -84,8 +94,8 @@ export default function About() {
         <div className="container local-roots">
           <div>
             <SectionHeading
-              eyebrow="Rooted in Cache Valley"
-              title="A community we call home."
+              eyebrow="Cache Valley"
+              title="Our Home in Providence"
             >
               Dr. Johnson returned to Cache Valley to raise his family. It’s the
               same community our office serves today.

@@ -4,118 +4,111 @@ export const serviceCategories = [
   {
     id: "preventive",
     name: "Preventive dentistry",
-    intro: "A healthy foundation for every smile.",
+    intro: "Routine checkups, cleanings, and screenings.",
     icon: "shield",
     services: [
       {
-        name: "Professional teeth cleanings",
-        description: "Routine cleanings as part of your ongoing dental care.",
+        name: "Professional Teeth Cleanings",
+        description: "To help maintain good oral health.",
       },
       {
-        name: "Oral cancer screenings",
-        description: "Screenings to check the tissues of your mouth.",
+        name: "Oral Cancer Screenings",
+        description:
+          "To help detect signs of oral cancer as early as possible.",
       },
       {
         name: "Sealants",
-        description:
-          "Protective coatings applied to the chewing surfaces of teeth.",
+        description: "To help protect children\u2019s teeth from decay.",
       },
     ],
   },
   {
     id: "restorative",
     name: "Restorative dentistry",
-    intro: "Thoughtful care for damaged teeth.",
+    intro: "Treatment for teeth damaged by decay or injury.",
     icon: "tooth",
     services: [
+      { name: "Fillings", description: "To restore teeth damaged by decay." },
       {
-        name: "Fillings",
-        description: "Treatment for teeth affected by cavities.",
+        name: "Crowns & Bridgework",
+        description:
+          "To replace large amounts of lost tooth structure and/or missing teeth.",
       },
       {
-        name: "Crowns",
-        description: "Custom restorations that cover a tooth.",
-      },
-      {
-        name: "Root canal treatment",
-        description: "Treatment for the tissue inside a tooth.",
+        name: "Root Canal Treatment",
+        description: "To treat and help save an infected tooth.",
       },
     ],
   },
   {
     id: "replacement",
     name: "Tooth replacement",
-    intro: "Explore your options for missing teeth.",
+    intro: "Bridges, implants, and dentures.",
     icon: "smile",
     services: [
       {
-        name: "Dental implants",
-        description:
-          "An option for replacing missing teeth. Ask us about your individual needs.",
+        name: "Dental Implants",
+        description: "For long-lasting tooth replacement.",
       },
       {
         name: "Bridgework",
         description:
-          "A fixed restoration that replaces one or more missing teeth.",
+          "To replace large amounts of lost tooth structure and/or missing teeth.",
       },
       {
-        name: "Removable dentures",
-        description: "Removable options for replacing missing teeth.",
+        name: "Removable Dentures",
+        description: "To replace missing teeth and restore your smile.",
       },
     ],
   },
   {
     id: "cosmetic",
     name: "Cosmetic dentistry",
-    intro: "Personal attention to your smile.",
+    intro: "Bonding, veneers, and teeth whitening.",
     icon: "sparkles",
     services: [
       {
-        name: "Teeth whitening",
-        description: "Talk with us about options for whitening your teeth.",
+        name: "Teeth Whitening",
+        description: "To brighten a faded or discolored smile.",
       },
       {
-        name: "Porcelain veneers",
+        name: "Porcelain Veneers",
         description:
-          "Thin porcelain restorations placed on the front surfaces of teeth.",
+          "For repairing larger chips and cracks and reshaping teeth.",
       },
-      {
-        name: "Bonding",
-        description:
-          "Tooth-colored material used to restore or change the appearance of a tooth.",
-      },
+      { name: "Bonding", description: "To repair small chips or cracks." },
     ],
   },
   {
     id: "periodontal",
     name: "Periodontal care",
-    intro: "Care for the gums that support your smile.",
+    intro: "Treatment for gum disease.",
     icon: "heart",
     services: [
       {
-        name: "Gum disease therapy",
-        description: "Care for gum disease, based on your dental examination.",
+        name: "Periodontal (Gum) Disease Therapy",
+        description: "To treat gum disease and help prevent tooth loss.",
       },
     ],
   },
   {
     id: "additional",
     name: "Additional care",
-    intro: "Support for your changing dental needs.",
+    intro: "Jaw pain, tooth alignment, extractions, and emergencies.",
     icon: "plus",
     services: [
       {
-        name: "Tooth extractions",
-        description: "Tooth removal when recommended following an examination.",
-      },
-      {
-        name: "TMJ/TMD treatment",
-        description: "Discuss concerns about your jaw joint with Dr. Johnson.",
-      },
-      {
-        name: "Orthodontic treatment",
+        name: "Tooth Extractions",
         description:
-          "Ask our office about treatment options for tooth alignment.",
+          "When a tooth is severely damaged or decayed and cannot be saved.",
+      },
+      {
+        name: "TMJ/TMD Treatment",
+        description: "For chronic jaw pain and related symptoms.",
+      },
+      {
+        name: "Orthodontic Treatment",
+        description: "To move teeth into the proper position.",
       },
       {
         name: "Emergency dental treatment",
@@ -127,23 +120,23 @@ export const serviceCategories = [
 ];
 export const careFeatures = [
   {
-    title: "Modern dental technology",
-    text: "Digital X-rays, intraoral pictures, and modern dental materials help inform your care.",
+    title: "Safety",
+    text: "Your safety is important to us. We strive to maintain quality-control procedures that meet applicable guidelines. All reusable dental instruments are thoroughly sterilized after use.",
+    icon: "shield",
+  },
+  {
+    title: "Infection Control",
+    text: "Infection control is an important part of maintaining a safe dental office. We use steam autoclaving, sterilization procedures, appropriate disinfectants, and disposable instruments where applicable.",
+    icon: "shield",
+  },
+  {
+    title: "Modern Dental Technology",
+    text: "In addition to modern dental materials, methods, and instrumentation, South Valley Family Dental offers an electronic quieter drill system, nitrous oxide, digital X-rays, and intraoral imaging.",
     icon: "scan",
   },
   {
-    title: "Your comfort matters",
-    text: "A patient-focused environment, with nitrous oxide available. Talk with us about what helps you feel at ease.",
-    icon: "heart",
-  },
-  {
-    title: "Care for the whole family",
-    text: "Our staff is trained to help children feel comfortable at the dentist.",
+    title: "Family Friendly",
+    text: "Our staff is trained to help children feel at ease during their visits. We have a prize box for them to choose from after their dental work is complete.\n\nOur treatment rooms also have mounted monitors so patients can watch a movie during treatment if they would like the distraction.",
     icon: "users",
-  },
-  {
-    title: "Attention to safety",
-    text: "Instrument sterilization, autoclaving, and infection-control procedures are part of our approach to care.",
-    icon: "shield",
   },
 ];

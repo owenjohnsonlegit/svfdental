@@ -187,15 +187,12 @@ export function ContactCard() {
   return (
     <div className="contact-card">
       <p className="eyebrow">Find us in Providence</p>
-      <h2>
-        Your neighborhood
-        <br />
-        dental office.
-      </h2>
+      <h2>Our Location</h2>
       <Address />
       <a className="phone-link" href={practice.phoneHref}>
         {practice.phone}
       </a>
+      <p>Se habla español.</p>
       <ExternalLink href={directionsUrl}>Get directions</ExternalLink>
     </div>
   );
@@ -217,11 +214,7 @@ export function LocationSection() {
           />
           <MapPin size={32} strokeWidth={1.3} aria-hidden="true" />
           <p className="eyebrow">Providence, Utah</p>
-          <h3>
-            Close to home.
-            <br />
-            Here for your smile.
-          </h3>
+          <h3>South Valley Family Dental in Providence</h3>
           <p>Find our office on Springcreek Parkway in Cache Valley.</p>
           <ExternalLink href={directionsUrl}>Open in Google Maps</ExternalLink>
         </div>
@@ -234,9 +227,12 @@ export function CTASection() {
     <section className="cta-section">
       <div className="container cta-inner">
         <div>
-          <p className="eyebrow">Let’s take care of your smile</p>
-          <h2>Ready to schedule your visit?</h2>
-          <p>Give our Providence office a call. We’re happy to help.</p>
+          <p className="eyebrow">Appointments</p>
+          <h2>Schedule an Appointment</h2>
+          <p>
+            Come see us at our office or call us at (435) 787-2122 to schedule
+            an appointment.
+          </p>
         </div>
         <div className="cta-actions">
           <CallButton label={practice.phone} secondary />
@@ -264,7 +260,7 @@ export function ServiceCard({
       <h3>{category.name}</h3>
       <p>{category.intro}</p>
       <span className="service-card-bottom">
-        Explore care <ArrowRight size={18} aria-hidden="true" />
+        View services <ArrowRight size={18} aria-hidden="true" />
       </span>
     </Link>
   );
@@ -272,17 +268,17 @@ export function ServiceCard({
 export function StaffCard({ member }: { member: StaffMember }) {
   return (
     <article className="staff-card">
-      {member.photo ? (
+      {member.photo && (
         <PracticePhoto
           id={member.photo}
           sizes="(max-width: 640px) calc(100vw - 40px), 400px"
         />
-      ) : (
-        <PhotoPlaceholder label={`Portrait of ${member.name}`} portrait />
       )}
       <h3>{member.name}</h3>
       {member.role && <p className="eyebrow">{member.role}</p>}
-      {member.bio && <p>{member.bio}</p>}
+      {member.bio?.split("\n\n").map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ))}
     </article>
   );
 }

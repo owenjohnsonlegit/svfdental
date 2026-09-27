@@ -17,15 +17,22 @@ export default function Services() {
   return (
     <>
       <PageHero
-        eyebrow="Care for your whole family"
-        title="Your smile. Thoughtfully cared for."
+        eyebrow="Services"
+        title="Dental Services"
         photo="treatment-room-door"
       >
-        Explore our dental services, then talk with Dr. Johnson about the care
-        that fits your needs.
+        Like everything else in life, if you want something to look good and
+        last, you’ve got to take care of it. Smiles are no exception.
       </PageHero>
       <section className="section">
         <div className="container">
+          <p>
+            Whether you want to improve your smile, replace loose or missing
+            teeth, remove stains, eliminate bad breath, or treat gum disease,
+            our staff will work with you to help you achieve a natural, healthy
+            smile.
+          </p>
+          <h2>Services We Offer Include</h2>
           <nav className="category-nav" aria-label="Service categories">
             {serviceCategories.map((c) => (
               <a key={c.id} href={`#${c.id}`}>
@@ -55,8 +62,8 @@ export default function Services() {
       <section className="section section-tint">
         <div className="container">
           <SectionHeading
-            eyebrow="Comfort, safety & family"
-            title="Good care is in the details."
+            eyebrow="Our Office"
+            title="Safety and Patient Comfort"
           />
           <div className="feature-grid" style={{ marginTop: 35 }}>
             {careFeatures.map((f) => (
@@ -71,18 +78,42 @@ export default function Services() {
           </div>
           <div className="emergency-note">
             <div>
-              <h3>Need emergency dental care?</h3>
+              <h3>Dental Emergencies</h3>
               <p>
-                We reserve appointment time for emergency needs. Call the office
-                to discuss your concern and availability.
+                We realize that dental pain can’t always wait. Appointment times
+                are reserved to help us address emergency dental needs promptly,
+                so please call our office if you are experiencing a dental
+                emergency.
               </p>
             </div>
             <CallButton label="Call our office" />
           </div>
+          <div className="content-stack">
+            <section>
+              <h2>Emergency Dental Treatment</h2>
+              <p>
+                If you have a life-threatening or severe injury, call 911 or go
+                directly to the nearest hospital emergency room.
+              </p>
+              <p>
+                We can treat a variety of dental injuries, including teeth that
+                have been chipped, moved, or knocked out entirely. Please call
+                our office for assistance.
+              </p>
+            </section>
+            <section>
+              <h2>Insurance Providers</h2>
+              <p>
+                We accept a variety of insurance plans. Please call our office
+                or check with your insurance provider to verify whether South
+                Valley Family Dental is included in your plan.
+              </p>
+            </section>
+          </div>
           <div className="equipment-gallery">
             <SectionHeading
               eyebrow="Inside the practice"
-              title="A closer look at our office."
+              title="Dental Equipment"
             />
             <PhotoGallery
               items={[

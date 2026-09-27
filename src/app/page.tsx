@@ -31,11 +31,11 @@ export default function Home() {
               Your family. Your smile. Your dentist.
             </p>
             <h1>
-              Good care.
+              Dental care
               <br />
-              Familiar faces.
+              for the
               <br />
-              <em>A healthier smile.</em>
+              <em>whole family.</em>
             </h1>
             <p className="hero-description">
               Family dentistry with a personal touch, right here in Providence,

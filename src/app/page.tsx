@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LocationMap } from "@/components/location-map";
 import { ArrowRight, MapPin, ShieldCheck, Users } from "lucide-react";
 import {
   CallButton,
@@ -240,7 +241,9 @@ export default function Home() {
           </TextLink>
         </div>
       </section>
-      <LocationSection />
+      <LocationSection>
+        <LocationMap />
+      </LocationSection>
       <CTASection />
     </>
   );

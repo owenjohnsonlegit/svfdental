@@ -197,7 +197,7 @@ export function ContactCard() {
     </div>
   );
 }
-export function LocationSection() {
+export function LocationSection({ children }: { children?: React.ReactNode }) {
   return (
     <section className="section" id="location">
       <div className="container location-grid">
@@ -218,6 +218,7 @@ export function LocationSection() {
           <p>Find our office on Springcreek Parkway in Cache Valley.</p>
           <ExternalLink href={directionsUrl}>Open in Google Maps</ExternalLink>
         </div>
+        {children && <div className="location-map-row">{children}</div>}
       </div>
     </section>
   );

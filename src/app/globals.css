@@ -473,6 +473,10 @@ main:focus {
   white-space: nowrap;
   margin-bottom: 5px;
 }
+.general-dentistry-summary {
+  max-width: 720px;
+  margin-top: 32px;
+}
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

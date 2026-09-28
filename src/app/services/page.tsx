@@ -4,6 +4,7 @@ import {
   SectionHeading,
   CTASection,
   CallButton,
+  TextLink,
 } from "@/components/ui";
 import { serviceCategories, careFeatures } from "@/data/services";
 import { pageMetadata } from "@/lib/metadata";
@@ -32,7 +33,7 @@ export default function Services() {
             our staff will work with you to help you achieve a natural, healthy
             smile.
           </p>
-          <h2>Services We Offer Include</h2>
+          <h2>Dental Services Offered</h2>
           <nav className="category-nav" aria-label="Service categories">
             {serviceCategories.map((c) => (
               <a key={c.id} href={`#${c.id}`}>
@@ -51,7 +52,9 @@ export default function Services() {
                 {c.services.map((s) => (
                   <article key={s.name}>
                     <h3>{s.name}</h3>
-                    <p>{s.description}</p>
+                    {s.description.split("\n\n").map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
                   </article>
                 ))}
               </div>
@@ -63,7 +66,7 @@ export default function Services() {
         <div className="container">
           <SectionHeading
             eyebrow="Our Office"
-            title="Safety and Patient Comfort"
+            title="Our Approach to Dental Care"
           />
           <div className="feature-grid" style={{ marginTop: 35 }}>
             {careFeatures.map((f) => (
@@ -72,7 +75,9 @@ export default function Services() {
                   <CareIcon name={f.icon} />
                 </span>
                 <h3>{f.title}</h3>
-                <p>{f.text}</p>
+                {f.text.split("\n\n").map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </article>
             ))}
           </div>
@@ -90,24 +95,19 @@ export default function Services() {
           </div>
           <div className="content-stack">
             <section>
-              <h2>Emergency Dental Treatment</h2>
-              <p>
-                If you have a life-threatening or severe injury, call 911 or go
-                directly to the nearest hospital emergency room.
-              </p>
-              <p>
-                We can treat a variety of dental injuries, including teeth that
-                have been chipped, moved, or knocked out entirely. Please call
-                our office for assistance.
-              </p>
-            </section>
-            <section>
               <h2>Insurance Providers</h2>
               <p>
-                We accept a variety of insurance plans. Please call our office
-                or check with your insurance provider to verify whether South
-                Valley Family Dental is included in your plan.
+                We accept a variety of insurance plans. Please see our office
+                information for more details.
               </p>
+              <p>
+                If you don’t see your insurance provider listed, please call our
+                office or check with your insurance provider to verify whether
+                South Valley Family Dental is included in your plan.
+              </p>
+              <TextLink href="/office-info#insurance">
+                Insurance Information
+              </TextLink>
             </section>
           </div>
           <div className="equipment-gallery">

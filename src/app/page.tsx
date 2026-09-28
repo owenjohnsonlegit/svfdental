@@ -223,8 +223,8 @@ export default function Home() {
       )}
       <section className="section section-tint">
         <div className="container">
-          <SectionHeading eyebrow="Dental Care" title="Featured Services" />
-          <div className="service-grid">
+          <SectionHeading eyebrow="Dental Care" title="Our Services" />
+          <div className="general-dentistry-summary">
             <article className="feature">
               <h3>General Dentistry</h3>
               <p>
@@ -233,22 +233,7 @@ export default function Home() {
                 maintain your oral health, and keep you looking and feeling your
                 best.
               </p>
-              <TextLink href="/services">General Dentistry</TextLink>
-            </article>
-            <article className="feature">
-              <h3>Teeth Whitening</h3>
-              <p>
-                Whitening procedures can help restore the appearance of stained,
-                dull, or discolored teeth.
-              </p>
-              <TextLink href="/services#cosmetic">Teeth Whitening</TextLink>
-            </article>
-            <article className="feature">
-              <h3>Kids Club</h3>
-              <p>
-                Help the crew of USS Sugar Swatters keep the galaxy free of
-                destructive sugars!
-              </p>
+              <TextLink href="/services">Explore Our Services</TextLink>
             </article>
           </div>
         </div>

@@ -1,5 +1,4 @@
-// Service names from the supplied legacy-site inventory. Descriptions deliberately
-// describe the listed treatments without adding outcome claims. Owner review required.
+// The 16 dental services from the supplied practice content, grouped for navigation.
 export const serviceCategories = [
   {
     id: "preventive",
@@ -43,17 +42,12 @@ export const serviceCategories = [
   {
     id: "replacement",
     name: "Tooth replacement",
-    intro: "Bridges, implants, and dentures.",
+    intro: "Implants and dentures for missing teeth.",
     icon: "smile",
     services: [
       {
         name: "Dental Implants",
         description: "For long-lasting tooth replacement.",
-      },
-      {
-        name: "Bridgework",
-        description:
-          "To replace large amounts of lost tooth structure and/or missing teeth.",
       },
       {
         name: "Removable Dentures",
@@ -111,9 +105,9 @@ export const serviceCategories = [
         description: "To move teeth into the proper position.",
       },
       {
-        name: "Emergency dental treatment",
+        name: "Emergency Dental Treatment",
         description:
-          "Call the office about an urgent dental concern. Appointment time is reserved for emergency needs.",
+          "If you have a life-threatening or severe injury, call 911 or go directly to the nearest hospital emergency room.\n\nWe can treat a variety of dental injuries, including teeth that have been chipped, moved, or knocked out entirely. Please call our office for assistance.",
       },
     ],
   },

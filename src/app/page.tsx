@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, MapPin, ShieldCheck, Heart, Users } from "lucide-react";
+import { ArrowRight, MapPin, ShieldCheck, Users } from "lucide-react";
 import {
   CallButton,
   TextLink,
@@ -60,15 +60,6 @@ export default function Home() {
               priority
               sizes="(max-width: 640px) calc(100vw - 50px), (max-width: 900px) 43vw, 600px"
             />
-            <div className="hero-plaque">
-              <span className="plaque-mark">
-                <Heart size={24} strokeWidth={1.4} />
-              </span>
-              <div>
-                <strong>South Valley Family Dental</strong>
-                <span>{practice.dentist}</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>

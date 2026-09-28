@@ -1,4 +1,4 @@
-// The 16 dental services from the supplied practice content, grouped for navigation.
+// Routine dental services grouped for navigation; emergency treatment is shown separately.
 export const serviceCategories = [
   {
     id: "preventive",
@@ -88,7 +88,7 @@ export const serviceCategories = [
   {
     id: "additional",
     name: "Additional care",
-    intro: "Jaw pain, tooth alignment, extractions, and emergencies.",
+    intro: "Jaw pain, tooth alignment, and extractions.",
     icon: "plus",
     services: [
       {
@@ -103,11 +103,6 @@ export const serviceCategories = [
       {
         name: "Orthodontic Treatment",
         description: "To move teeth into the proper position.",
-      },
-      {
-        name: "Emergency Dental Treatment",
-        description:
-          "If you have a life-threatening or severe injury, call 911 or go directly to the nearest hospital emergency room.\n\nWe can treat a variety of dental injuries, including teeth that have been chipped, moved, or knocked out entirely. Please call our office for assistance.",
       },
     ],
   },

@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import {
   PageHero,
   CareIcon,
@@ -34,31 +35,27 @@ export default function Services() {
             smile.
           </p>
           <h2>Dental Services Offered</h2>
-          <nav className="category-nav" aria-label="Service categories">
-            {serviceCategories.map((c) => (
-              <a key={c.id} href={`#${c.id}`}>
-                {c.name}
-              </a>
-            ))}
-          </nav>
           {serviceCategories.map((c) => (
-            <section className="service-category" id={c.id} key={c.id}>
-              <header>
+            <details className="service-category" id={c.id} key={c.id}>
+              <summary>
                 <CareIcon name={c.icon} />
-                <h2>{c.name}</h2>
+                <h3>{c.name}</h3>
+                <ChevronDown className="service-chevron" aria-hidden="true" />
+              </summary>
+              <div className="service-category-content">
                 <p>{c.intro}</p>
-              </header>
-              <div className="service-list">
-                {c.services.map((s) => (
-                  <article key={s.name}>
-                    <h3>{s.name}</h3>
-                    {s.description.split("\n\n").map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </article>
-                ))}
+                <div className="service-list">
+                  {c.services.map((s) => (
+                    <article key={s.name}>
+                      <h4>{s.name}</h4>
+                      {s.description.split("\n\n").map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </article>
+                  ))}
+                </div>
               </div>
-            </section>
+            </details>
           ))}
         </div>
       </section>

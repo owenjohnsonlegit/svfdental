@@ -798,36 +798,44 @@ main:focus {
 .info-panel + .info-panel {
   margin-top: 25px;
 }
-.category-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 55px;
-}
-.category-nav a {
-  border: 1px solid var(--line);
-  padding: 10px 16px;
-  font-size: 0.8rem;
-  min-height: 44px;
-}
-.category-nav a:hover {
-  background: var(--paper);
-  border-color: var(--blue);
-}
 .service-category {
-  display: grid;
-  grid-template-columns: 0.8fr 1.7fr;
-  gap: 65px;
-  padding: 45px 0;
   border-top: 1px solid var(--line);
   scroll-margin-top: 115px;
 }
-.service-category h2 {
-  font-size: 2.2rem;
-  margin: 18px 0;
+.service-category:last-child {
+  border-bottom: 1px solid var(--line);
 }
-.service-category header > p {
-  font-size: 0.87rem;
+.service-category summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.service-category summary::-webkit-details-marker {
+  display: none;
+}
+.service-category summary > svg {
+  flex-shrink: 0;
+}
+.service-category summary h3 {
+  flex: 1;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  margin: 0;
+}
+.service-category summary:hover {
+  color: var(--blue);
+}
+.service-category[open] .service-chevron {
+  transform: rotate(180deg);
+}
+.service-category-content {
+  padding-bottom: 32px;
+}
+.service-category-content > p {
+  margin-bottom: 24px;
+  font-size: 0.95rem;
 }
 .service-list {
   display: grid;
@@ -837,7 +845,7 @@ main:focus {
 .service-list article {
   padding: 8px 0;
 }
-.service-list h3 {
+.service-list h4 {
   font-size: 1rem;
   margin-bottom: 10px;
 }
@@ -1113,9 +1121,6 @@ main:focus {
     gap: 35px;
     grid-template-columns: 1.2fr 1fr;
   }
-  .service-category {
-    gap: 35px;
-  }
   .contact-page-grid {
     gap: 35px;
   }
@@ -1374,25 +1379,13 @@ main:focus {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .service-category {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 35px 0;
+  .service-category summary {
+    gap: 12px;
+    padding: 24px 0;
   }
   .service-list {
     gap: 24px;
     grid-template-columns: 1fr;
-  }
-  .service-category h2 {
-    margin: 12px 0;
-  }
-  .category-nav {
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .category-nav a {
-    font-size: 0.73rem;
-    padding: 10px 12px;
   }
   .team-grid {
     grid-template-columns: 1fr;

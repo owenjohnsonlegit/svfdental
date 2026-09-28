@@ -19,14 +19,14 @@ export const practice = {
   externalPaymentUrl: null as string | null,
   careCreditUrl: null as string | null,
   socialLinks: [] as { label: string; url: string }[],
-  // TODO LAUNCH BLOCKER: confirm all hours, especially conflicting Thursday schedules.
-  hoursConfirmed: false,
+  // Office hours confirmed by the practice owner.
+  hoursConfirmed: true,
   hours: [
-    { day: "Monday", time: "8:00 AM–5:00 PM" },
+    { day: "Monday", time: "8:00 AM – 5:00 PM" },
     { day: "Tuesday", time: "12:00 PM–7:00 PM" },
-    { day: "Wednesday", time: "8:00 AM–5:00 PM" },
-    { day: "Thursday", time: "Call to confirm" },
-    { day: "Friday", time: "8:00 AM–12:30 PM", note: "Every other Friday" },
+    { day: "Wednesday", time: "8:00 AM – 5:00 PM" },
+    { day: "Thursday", time: "7:00 AM – 2:00 PM" },
+    { day: "Friday", time: "8:00 AM – 12:30 PM", note: "Every other Friday" },
     { day: "Saturday", time: "Closed" },
     { day: "Sunday", time: "Closed" },
   ],

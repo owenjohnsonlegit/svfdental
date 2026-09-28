@@ -3,8 +3,8 @@
 The live legacy site returned a Cloudflare challenge during migration on September 27, 2026. Content is based on the supplied project brief, not an independently retrieved copy of the legacy site. This build is ready for review; the items below block final content approval and deployment.
 
 - [ ] Confirm practice name, dentist name/credentials, phone, full postal address, and map destination.
-- [ ] Confirm **Thursday hours**: the brief reports both 8 AM–5 PM and 7 AM–2 PM. The website intentionally displays “Call to confirm.”
-- [ ] Confirm all other hours, every-other-Friday schedule, and closures. Update `src/data/practice.ts`; add structured opening hours only after confirmation (do not publish misleading weekly Friday hours).
+- [x] Owner confirmed **Thursday hours**: 7 AM–2 PM.
+- [x] Owner confirmed all office hours, the every-other-Friday schedule, and weekend closures. Updated the shared schedule in `src/data/practice.ts`. Do not publish misleading weekly Friday hours.
 - [ ] Supply and test the **exact patient forms URL** and **exact secure payment URL** with the practice/provider. Set the two centralized URL values; navigation then links directly to the external services. Until then, call-assistance pages are used. Do not substitute a generic provider homepage.
 - [ ] Confirm accepted insurance, claim filing, HMO policy, cash/check/card acceptance, and flexible payment arrangements.
 - [ ] Confirm CareCredit availability and the approved link; no financing terms or provider link are published yet.
@@ -33,4 +33,4 @@ Update centralized data → approve final photography/content → verify provide
 
 ## Copy update
 
-Applied the owner-supplied Updated Website Copy throughout the site. Thursday remains “Call to confirm.” CareCredit details are conditional on a confirmed provider URL. Patient forms and payment URLs remain unset, with call-assistance pages. No FAQ or Privacy Policy link was added because neither an approved page nor a destination was supplied. Insurance text links to existing office information instead of an unavailable FAQ.
+Applied the owner-supplied Updated Website Copy throughout the site. The owner subsequently confirmed Thursday as 7 AM–2 PM and confirmed the full weekly schedule. CareCredit details are conditional on a confirmed provider URL. Patient forms and payment URLs remain unset, with call-assistance pages. No FAQ or Privacy Policy link was added because neither an approved page nor a destination was supplied. Insurance text links to existing office information instead of an unavailable FAQ.

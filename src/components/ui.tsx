@@ -167,9 +167,6 @@ export function OfficeHours() {
           </div>
         ))}
       </dl>
-      <p className="fine-print">
-        Please call to confirm office hours before your visit.
-      </p>
     </div>
   );
 }

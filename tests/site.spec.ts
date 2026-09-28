@@ -97,7 +97,7 @@ test("internal routes, metadata, redirects and 404", async ({ request }) => {
   expect(redirect.status()).toBe(301);
   expect(redirect.headers().location).toBe("/office-info");
 });
-test("phone, directions, schema and unknown hours are consistent", async ({
+test("phone, directions, schema and confirmed hours are consistent", async ({
   page,
 }) => {
   await page.goto("/contact");
@@ -111,7 +111,7 @@ test("phone, directions, schema and unknown hours are consistent", async ({
     /https:\/\/www.google.com\/maps\/dir\//,
   );
   await expect(
-    page.getByText("Call to confirm", { exact: true }).first(),
+    page.getByText("7:00 AM – 2:00 PM", { exact: true }).first(),
   ).toBeVisible();
   const schema = JSON.parse(
     await page.locator('script[type="application/ld+json"]').innerText(),

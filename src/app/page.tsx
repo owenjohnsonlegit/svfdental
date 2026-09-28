@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <PracticePhoto
-              id="waiting-room-fireplace"
+              id="building-front"
               className="hero-photo"
               priority
               sizes="(max-width: 640px) calc(100vw - 50px), (max-width: 900px) 43vw, 600px"

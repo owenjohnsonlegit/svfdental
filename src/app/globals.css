@@ -577,6 +577,24 @@ main:focus {
 .emergency-note a {
   white-space: nowrap;
 }
+.location-map {
+  min-width: 0;
+  margin-top: 24px;
+}
+.location-map-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 50vw, 400px);
+  border: 0;
+}
+.location-map > .button {
+  margin-top: 20px;
+}
 .location-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr 1fr;

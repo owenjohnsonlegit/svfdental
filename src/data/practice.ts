@@ -12,6 +12,8 @@ export const practice = {
     region: "UT",
     postalCode: "84332",
   },
+  googleMapsEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.3464605156973!2d-111.83082082412402!3d41.7130421712604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87547e491bb183fd%3A0x759f2ed6ce54db55!2sSouth%20Valley%20Family%20Dental!5e0!3m2!1sen!2stw!4v1790603600333!5m2!1sen!2stw",
   externalPatientFormsUrl:
     "https://www.ident.ws/template_include/new_patient_sign_in.do?site=19448&practiceId=48125",
   externalPaymentUrl: null as string | null,
@@ -30,7 +32,7 @@ export const practice = {
   ],
 };
 export const fullAddress = `${practice.address.street}, ${practice.address.city}, ${practice.address.region} ${practice.address.postalCode}`;
-export const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`;
+export const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${practice.name}, ${fullAddress}`)}`;
 export const navigation = [
   { label: "Home", href: "/" },
   { label: "Office Information", href: "/office-info" },

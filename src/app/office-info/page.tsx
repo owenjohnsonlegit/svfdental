@@ -8,7 +8,8 @@ import {
   SectionHeading,
 } from "@/components/ui";
 import { PhotoGallery } from "@/components/photography";
-import { practice, directionsUrl } from "@/data/practice";
+import { LocationMap } from "@/components/location-map";
+import { practice } from "@/data/practice";
 import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "Office Information",
@@ -38,9 +39,7 @@ export default function OfficeInfo() {
                 {practice.dentist}
               </p>
               <Address />
-              <ExternalLink href={directionsUrl}>
-                Get directions to our office
-              </ExternalLink>
+              <LocationMap />
             </section>
             <section>
               <h2>Appointments</h2>

@@ -8,9 +8,8 @@ import {
 } from "@/components/ui";
 import { practice } from "@/data/practice";
 import { pageMetadata } from "@/lib/metadata";
-import { PracticePhoto } from "@/components/photography";
-import { ExternalLink, SectionHeading } from "@/components/ui";
-import { directionsUrl } from "@/data/practice";
+import { LocationMap } from "@/components/location-map";
+import { SectionHeading } from "@/components/ui";
 export const metadata = pageMetadata(
   "Contact South Valley Family Dental",
   "Call South Valley Family Dental in Providence, Utah. Find our address, directions, office hours, and patient resources.",
@@ -47,16 +46,11 @@ export default function Contact() {
         <div className="container">
           <div className="section-top">
             <SectionHeading eyebrow="Directions" title="Our Location">
-              See our office in its neighborhood, with Cache Valley’s mountains
-              in the distance.
+              Find our office on Springcreek Parkway in Providence and get
+              directions for your visit.
             </SectionHeading>
-            <ExternalLink href={directionsUrl}>Get Directions</ExternalLink>
           </div>
-          <PracticePhoto
-            id="valley-southeast"
-            className="directions-photo"
-            sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1300px) calc(100vw - 96px), 1200px"
-          />
+          <LocationMap />
         </div>
       </section>
       <section className="section section-tint">

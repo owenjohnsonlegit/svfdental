@@ -12,7 +12,8 @@ export const practice = {
     region: "UT",
     postalCode: "84332",
   },
-  externalPatientFormsUrl: null as string | null,
+  externalPatientFormsUrl:
+    "https://www.ident.ws/template_include/new_patient_sign_in.do?site=19448&practiceId=48125",
   externalPaymentUrl: null as string | null,
   careCreditUrl: null as string | null,
   socialLinks: [] as { label: string; url: string }[],
@@ -36,8 +37,7 @@ export const navigation = [
   { label: "Services", href: "/services" },
   {
     label: "Patient Forms",
-    href: practice.externalPatientFormsUrl ?? "/patient-forms",
-    external: !!practice.externalPatientFormsUrl,
+    href: "/patient-forms",
   },
   {
     label: "Make a Payment",

@@ -28,13 +28,7 @@ export default function Services() {
       </PageHero>
       <section className="section">
         <div className="container">
-          <p>
-            Whether you want to improve your smile, replace loose or missing
-            teeth, remove stains, eliminate bad breath, or treat gum disease,
-            our staff will work with you to help you achieve a natural, healthy
-            smile.
-          </p>
-          <h2>Dental Services Offered</h2>
+          <h2 className="services-heading">Dental Services Offered</h2>
           {serviceCategories.map((c) => (
             <details className="service-category" id={c.id} key={c.id}>
               <summary>
@@ -90,7 +84,7 @@ export default function Services() {
             </div>
             <CallButton label="Call our office" />
           </div>
-          <div className="content-stack">
+          <div className="content-stack services-insurance">
             <section>
               <h2>Insurance Providers</h2>
               <p>

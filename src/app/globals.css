@@ -798,6 +798,12 @@ main:focus {
 .info-panel + .info-panel {
   margin-top: 25px;
 }
+.services-heading {
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+.services-insurance {
+  margin-top: clamp(36px, 5vw, 56px);
+}
 .service-category {
   border-top: 1px solid var(--line);
   scroll-margin-top: 115px;
